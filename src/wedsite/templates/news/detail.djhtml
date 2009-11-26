@@ -1,0 +1,17 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n nav %}
+{% block meta_title %}{{newsitem.title|truncatewords:5}} | Cecilia &amp; Gabriele News{% endblock %}
+{% block title %}{{newsitem.title|truncatewords:5}}{% endblock %}
+{% block content %}
+<div class="single">
+	<h2><a name="top">{{ newsitem.title }}</a></h2>
+	<p class="info"> by <span class="author">{{ newsitem.author}}</span> on <span class="date">{{ newsitem.pub_date|date }}</span></p>
+	<div class="text">
+		{% ifequal newsitem.author.username "cecilia" %}
+			{{ newsitem.text|escape }}
+		{% else %}
+			{{ newsitem.text|safe }}
+		{% endifequal %}
+	</div>
+</div>
+{% endblock %}

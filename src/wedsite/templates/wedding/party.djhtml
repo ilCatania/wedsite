@@ -1,0 +1,86 @@
+{% extends 'section_home.djhtml' %}
+{% load i18n %}
+{% block section_intro %}
+	<div class="pic left"><img src="/img/villa-moroni.jpg"/></div>
+	<p>{% blocktrans %}party_intro_p1{% endblocktrans %}</p>
+{% endblock %}
+{% block left%}
+<h3>{% trans "confirm_form_title" %}</h3>
+{% if showform %} 
+	<form action='' id="confirmparty" method="post">
+		<p class="item first">
+			{% blocktrans %}confirm_form_legend{% endblocktrans %}
+		</p>
+		{% if errors %}
+			<p class="item errors">{% blocktrans %}confirm_form_error{% endblocktrans %}</p>
+		{% endif %}
+		<p class="item">
+			<label for="id_name" >{% trans "Full name" %}:</label>
+			<input type="text" maxlength="50" name="name" id="id_name"{% if errors.name %} class="error"{% endif %}
+				title="{% trans 'Write your full name here (e.g. Brambilla Family).' %}"
+				value="{{prepopulated_data.name}}"/>
+		</p>
+		<p class="item">
+			<label for="id_adults" >{% trans "Number of adults" %}:</label>
+			<input type="text" id="id_adults" name="adults" size="3"{% if errors.adults %} class="error"{% endif %}
+				title="{% trans 'Write the number of adults (older than 12) that will be attending here.' %}"
+				{% if prepopulated_data.adults %}value="{{prepopulated_data.adults}}"{% endif %}/>
+		</p>
+		<p class="item">
+			<label id="addchildren_label" for="id_children">{% trans "Number of children" %}
+				(<a href="javascript:void(0)">{% trans "Hide" %}</a>):
+			</label>
+			<input type="text" id="id_children" name="children" size="3"{% if errors.children %} class="error"{% endif %}
+				title="{% trans 'Write the number of children (aged 12 or less) that will be attending here.' %}"
+				{% if prepopulated_data.children %}value="{{prepopulated_data.children}}"{% endif %}/>
+		</p>
+		<p id="addchildren" class="item">{% trans "Are you bringing children aged 12 or less?" %} <a href="javascript:void(0)">{% trans "Click here to add them." %}</a></p>
+		<input type="hidden" name="edit_confirmation_id" value="{{ prepopulated_data.id }}" style="display:none;"/>
+		<input type="submit" class="submit"
+			{% if prepopulated_data.id %}name="update" value="{% trans 'Confirm' %}"
+			{% else %}name="create" value="{% trans 'Confirm' %}"
+			{% endif %}/>
+	</form>
+{% else %}
+	<p class="item first">{% blocktrans %}confirm_list_legend{% endblocktrans %}</p>
+	<ul id="confirmations">
+	{% for confirmation in confirmations %}
+		<li id="confirmation_{{confirmation.id}}" class="item">
+			<b>{{ confirmation.name }}</b> - 
+			<span class="body">
+				{{confirmation.adults }} {% trans "adults" %}{% if confirmation.children %} {% trans "and" %} {{confirmation.children }} {% trans "children" %}{% endif %}.
+				<span class="actions">
+					<a class="edit" href="javascript:void(0);">{% trans "Edit" %}</a> |
+					<a class="delete" href="javascript:void(0);">{% trans "Delete" %}</a>
+				</span>
+			</span>
+		</li>
+	{% endfor %}
+	</ul>
+	<!-- TODO -->
+	<form action="" method="post" id="newconfirmation"{% if not can_add_more %} style='display:none;'{% endif %}>
+		<input type="submit" class= "submit" name="new" value="{% trans 'Add another' %}"/>
+	</form>
+	{% if not can_add_more %}
+		<p class="item" id="maxconfirmations_message">
+			{% trans 'max_confirm_message'%}
+		</p>
+	{% endif %}
+	<form action="" method="post" id="editconfirmation">
+		<input type="hidden" name="edit_confirmation_id"/>
+		<input type="hidden" name="edit" value="action"/>
+	</form>
+{% endif %}
+{% endblock %}
+{% block right %}
+	<h3>{% trans "Useful links" %}</h3>
+	<div class="item first">
+		{% blocktrans with "http://www.villamoroni.it/" as addr %}moroni_link with {{addr}}{% endblocktrans %}
+	</div>
+	<div class="item">
+		{% blocktrans with "http://maps.google.it/maps?f=d&source=s_d&saddr=Piazza+della+Chiesa&daddr=Piazza+della+Libert%C3%A0+28,+stezzano&hl=" as addr1 and "&geocode=FSPetgIdYiuQAA%3B&mra=ls&sll=45.539008,9.449143&sspn=0.005531,0.009645&ie=UTF8&z=12" as addr2 %}moroni_google_directions with {{ addr1 }}{{ LANGUAGE_CODE }}{{ addr2 }}{% endblocktrans %}
+	</div>
+	<div class="item">
+		{% blocktrans with "http://www.facebook.com/pages/Villa-Moroni/105719515991" as addr %}moroni_fb with {{addr}}{% endblocktrans %}
+	</div>
+{% endblock %}

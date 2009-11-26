@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	/*font-size: 100%;*/
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.lang button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+/* begin my stuff, remember to merge */
+
+
+/***************************
+GRID
+***************************/
+
+#grid {
+	position:absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	z-index: -2;
+}
+
+#grid .item {
+	margin: 0 1%;
+	width: 6.33%;
+	background-color: #dddddd;
+	height: 100%;
+	float: left;
+}
+/***************************
+END GRID
+***************************/
+
+
+
+a { /* todo: make a's noticeable somehow */
+	text-decoration: none;
+	/* font-weight: bold; */
+	color:	#a28138;
+}
+
+a:hover {
+ 	text-decoration: underline;
+}
+
+h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover,
+h4 a, h4 a:hover, h5 a, h5 a:hover, h6 a, h6 a:hover {
+	color:inherit;
+	text-decoration: none;
+	background: transparent;
+}
+
+#content .actions, #content .info {
+	font-size: 0.8em;
+}
+#content .info {
+	color:	#a28138;
+}
+
+html {
+	height: 100%;	
+}
+
+body {
+	background: #ffe599 repeat-x url(img/bg.png) scroll;
+	font-size: 62.5%; /* 1 em = 10 px */
+	font-family: Helvetica,verdana,Arial,sans-serif;
+	color: #444444;
+	height:100%;
+}
+
+/* LAYOUT */
+
+#wrapper {
+	min-width: 720px;
+	width: 92%;
+	margin: 0 4%;
+	position: relative;
+	min-height:100%;
+}
+
+#header
+{
+	height: 130px;
+	width: 98%;
+	margin: 0 1% 10px 1%;
+	position: relative;
+}
+
+#sidebar {
+	float: left;
+	width:23%;
+	margin: 0 1%;
+}
+
+#content {
+	margin: 0;
+	padding-bottom: 60px;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+
+#content.with_sidebar {
+	float: left;
+	width:75%;
+}
+#content.no_sidebar {
+	width: 100%;
+}
+
+#footer {
+	height: 40px;
+	text-align: center;
+	margin: 10px 1%;
+	width: 98%;
+	padding-top: 30px;
+	position:absolute;
+	bottom:0;
+}
+
+/* ugly hack to make delivery */
+.clearfix {
+	clear: both;
+	height: 0px;
+	visibility: hidden;
+}
+

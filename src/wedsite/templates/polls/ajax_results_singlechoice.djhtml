@@ -1,0 +1,27 @@
+{% extends 'polls/ajax_results_base.djhtml' %}
+{% block results %}
+{% load i18n %}
+<ol class="poll_results">
+{% for d in data %}
+	<li>
+		<div class="hist_wrapper">
+			<span class="hist" style="padding-left: {{ d.perc_width }}%"></span>
+		</div>
+		<div class="num_votes">{{ d.votes }} {% trans 'votes' %} ({{ d.perc }}%)</div>
+		<div class="label">
+			{{ d.choice }}
+			{% if d.votedByC %}
+				<img src="/layout/img/female-ico.png" 
+				alt="{% trans 'Cecilia voted this' %}" 
+				title="{% trans 'Cecilia voted this' %}" />
+			{% endif %}
+			{% if d.votedByG %}
+				<img src="/layout/img/male-ico.png" 
+				alt="{% trans 'Gabriele voted this' %}" 
+				title="{% trans 'Gabriele voted this' %}" />
+			{% endif %}
+		</div>
+	</li>
+{% endfor %}
+</ol>
+{% endblock %}

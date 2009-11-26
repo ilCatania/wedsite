@@ -1,0 +1,40 @@
+{% extends 'blank.djhtml' %}
+{% load i18n nav %}
+{% block body %}
+<div id="wrapper">
+{% if False %}
+<div id="grid">
+	<div class="item col1"></div>
+	<div class="item col2"></div>
+	<div class="item col3"></div>
+	<div class="item col4"></div>
+	<div class="item col5"></div>
+	<div class="item col6"></div>
+	<div class="item col7"></div>
+	<div class="item col8"></div>
+	<div class="item col9"></div>
+	<div class="item col0"></div>
+	<div class="item col11"></div>
+	<div class="item col12"></div>
+</div>
+{% endif %}
+	<div id="header">{% block header %}
+		<form action="/lang/setlang/" method="POST">
+			<fieldset class="lang">
+				{% for lang in LANGUAGES %}<button type="submit" class="{{ lang.0 }} {% ifequal lang.0 LANGUAGE_CODE %}disabled{% else %}enabled{% endifequal %}" value="{{ lang.0 }}" name="language" title="{{ lang.1 }}"{% ifequal lang.0 LANGUAGE_CODE %} disabled="disabled"{% endifequal %}>{{ lang.1 }}</button>
+				{% endfor %}
+			</fieldset>
+		</form>
+		{% mainnav %}
+		<h1>{% block title %}{% if title %}{{ title }}{% else %}Cecilia &amp; Gabriele{% endif %}{% endblock %}</h1>
+	{% endblock %}</div>
+	{% block sidebar %}{% endblock %}
+	<div id="content"
+		class="{% block content_class %}{% endblock%}{% if content_class %} {{content_class}}{% endif %}">
+		{% block content %}{% endblock %}
+	</div>
+	<div class="clearfix"></div><!-- ugly hack to make delivery -->
+	<div id="footer">{% block footer %}
+		{% blocktrans with "webmaster@ceciliaegabriele.heliohost.org" as mail %}footer with {{mail}}{% endblocktrans %}
+	{% endblock %}</div>
+	</div>{% endblock %}

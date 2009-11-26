@@ -1,0 +1,26 @@
+# -FrontPage-
+
+
+AuthUserFile /home/gcatania/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home/gcatania/public_html/_vti_pvt/service.grp
+
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName ceciliaegabriele.heliohost.org
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(dispatch\.wsgi/.*)$ - [L]
+RewriteRule ^media/(.*) django_admin_media/$1 [PT]
+RewriteRule ^(wedsite_static|django_admin_media)(/.+/.*\..*)$ - [L]
+RewriteRule ^(img|layout|js)/(.*)\.(.*)$ wedsite_static/$1/$2.$3 [L,PT]
+RewriteRule ^(.*)$ dispatch.wsgi/$1 [QSA,PT,L]

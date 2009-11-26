@@ -1,0 +1,9 @@
+{% extends 'base.djhtml' %}
+{% load i18n nav %}
+{% block sidebar %}
+	<div id="sidebar">
+		{% subnav %}
+		{% block sidecontent %}<div id="countdown"></div>{% endblock %}
+	</div>
+{% endblock %}
+{% block content_class %}with_sidebar{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'section_home.djhtml' %}
+{% load i18n %}
+{% block section_intro %}
+	<div class="pic left"><img src="/img/villa-moroni.jpg"/></div>
+	<p>
+			GIFTS: TODO
+	</p>
+{% endblock %}
+{% block left%}
+<h3>title</h3>
+<div>text</div>
+{% endblock %}

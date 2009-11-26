@@ -1,0 +1,11 @@
+{% extends 'polls/ajax_form_base.djhtml' %}
+{% block form_content %}
+<ol class="poll_choices">
+{% for choice in poll.singlechoicepoll.choice_set.all %}
+	<li>
+		<input type="radio" name="voted" id="choice_{{ choice.order }}" value="{{ choice.order }}" />
+		<label for="choice_{{ choice.order }}">{{ choice.choice }}</label>
+	</li>
+{% endfor %}
+</ol>
+{% endblock %}

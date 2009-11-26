@@ -1,0 +1,21 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n nav %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<ul>{% for item in news_items %}
+	<li class="item{% if forloop.first %} first{% endif %}">
+		<h3><a href="/home/news/{{item.slug}}/">{{item.title}}</a></h3>
+		<p class="info">
+			{%trans "posted by" %} <span class="author">{{ item.author.username }}</span>
+			{% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span>
+		</p>
+		<p class="text">
+			{% ifequal item.author.username "cecilia" %}
+				{{item.text|escape|truncatewords:80}}
+			{% else %}
+				{{item.text|safe|truncatewords_html:80}}
+			{% endifequal %}
+		</p>
+	</li>
+{% endfor %}</ul>
+{% endblock %}

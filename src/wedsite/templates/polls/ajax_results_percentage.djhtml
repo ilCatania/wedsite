@@ -1,0 +1,1 @@
+{% extends 'polls/ajax_results_base.djhtml' %}

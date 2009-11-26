@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-23 00:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\script.0.2.js.py:180
+msgid "getting_married_in"
+msgstr "Cecilia e Gabriele si sposeranno tra"
+
+#: .\templates\script.0.2.js.py:183
+msgid "been_married_for"
+msgstr "Cecilia e Gabriele sono sposati da"
+
+#: .\templates\script.0.2.js.py:186
+msgid "getting_married_now"
+msgstr "Cecilia e Gabriele si stanno sposando proprio adesso!"
+
+msgid "and"
+msgstr "e"
+
+msgid "yy"
+msgstr "anni"
+
+msgid "yy1"
+msgstr "anno"
+
+msgid "MM"
+msgstr "mesi"
+
+msgid "MM1" 
+msgstr "mese"
+
+msgid "ww"
+msgstr "settimane"
+
+msgid "ww1"
+msgstr "settimana"
+
+msgid "dd"
+msgstr "giorni"
+
+msgid "dd1"
+msgstr "giorno"
+
+msgid "HH"
+msgstr "ore"
+
+msgid "HH1"
+msgstr "ora"
+
+msgid "mm"
+msgstr "minuti"
+
+msgid "mm1"
+msgstr "minuto"
+
+msgid "ss"
+msgstr "secondi"
+
+msgid "ss1"
+msgstr "secondo"

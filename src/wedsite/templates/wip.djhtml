@@ -1,0 +1,16 @@
+{% extends 'no_sidebar.djhtml' %}
+{% load i18n %}
+{% block meta_title %}{% trans 'Work in progress' %}{% endblock %}
+{% block title %}{% trans 'Work in progress' %}{% endblock %}
+{% block content %}
+<div class="single">
+	<div class="pic center border">
+		<img src="/img/wip{{img_no}}.png" 
+			alt="{% trans 'Work in progress' %}"
+			title="{% trans 'Work in progress' %}" />
+	</div>
+	<p class="highlight">
+		{% blocktrans %}wip_body{% endblocktrans %}
+	</p>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'no_sidebar.djhtml' %}
+{% load i18n %}
+{% block header %}
+<ul id="mainnav">
+  <li class="home"><a href="/home/">{% trans "home" %}</a></li>
+</ul>
+<h1>{% trans "500_title" %}</h1>
+{% endblock %}
+{% block content %}
+<div class="single center">
+	<h2>{% trans "500_subtitle" %} (500)</h2>
+	<p>{% trans "500_body" %}</p>
+</div>
+{% endblock %}

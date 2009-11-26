@@ -1,0 +1,3 @@
+<ul id="mainnav">{% load i18n %}{% for entry in mainnav %}
+  <li class="{{entry.slug}}{% if entry.selected %} selected{% endif %}"><a href="{{ entry.url }}">{{ entry.name }}</a></li>{% endfor %}
+</ul>

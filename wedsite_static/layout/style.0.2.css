@@ -1,0 +1,643 @@
+/* HEADER and NAVIGATION*/
+#header h1 {
+	font: italic 2em "Georgia",times,serif;
+	color: #fc3;
+	padding: 40px 0 0 270px;
+	z-index: 100;
+}
+
+#mainnav, #subnav {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	font-family: "Arial Black",Arial,sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+#mainnav a, mainnav a:hover, #subnav a, #subnav a:hover
+{
+	display: block;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	text-decoration:none;
+}
+
+#mainnav {
+	float:right;
+}
+
+#header .lang {
+	float: right;
+	height: 44px;
+	width: 16px;
+	padding: 13px 16px;
+}
+
+#header .lang button {
+	width: 16px;
+	height: 16px;
+	background: url('img/lang-ico.png');
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-indent: -9999px;
+}
+#header .lang .enabled {
+	cursor: pointer;
+}
+#header .lang .it.enabled {
+	background-position: -16px 0;
+}
+#header .lang .en {
+	margin-top: 12px;
+	background-position: -16px -16px;
+}
+#header .lang .en.disabled {
+	background-position: 0 -16px;
+}
+
+#mainnav li
+{
+	float: left;
+}
+
+#mainnav a, #mainnav .hover {
+	height: 10px;
+	width: 120px;
+	padding: 100px 0 20px;
+	background: url('img/mainnav.png');
+}
+
+#mainnav a {
+	color: #006;
+	font-weight: bold;
+	font-size: 1.3em;
+	position:relative;
+}
+#mainnav .selected *{
+	color: #fc3;
+}
+
+#mainnav .hover
+{
+	color: #fc3;
+	display: none;
+	position:absolute;
+	left: 0; 
+	top: 0;
+}
+
+#mainnav .home a{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 240px;
+	text-indent:-9999px;
+}
+
+#mainnav .us a{
+	background-position: -240px 0;
+}
+#mainnav .you a{
+	background-position: -360px 0;
+}
+#mainnav .wedding a{
+	background-position: -480px 0;
+}
+
+#mainnav .home .hover {
+	background-position: 0 -130px;
+}	
+#mainnav .us .hover {
+	background-position: -240px -130px;
+}
+#mainnav .you .hover {
+	background-position: -360px -130px;
+}
+#mainnav .wedding .hover {
+	background-position: -480px -130px;
+}
+
+#mainnav .home.selected a{
+	background-position: 0 -260px;
+}
+#mainnav .us.selected a{
+	background-position: -240px -260px;
+}
+#mainnav .you.selected a{
+	background-position: -360px -260px;
+}
+#mainnav .wedding.selected a{
+	background-position: -480px -260px;
+}
+
+#subnav li {
+	display: block;
+	text-align: right;
+}
+
+#subnav a, #subnav .hover {
+	background: url(img/subnav.png) no-repeat;
+	color: #fc3;
+}
+#subnav a {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#subnav .hover {
+	/*padding: 45px 30px 45px 0;*/
+	padding: 45px 0;
+	height: 10px;
+	/*width: 170px;*/
+	width: 0;
+}
+#subnav .selected a {
+	padding: 45px 30px 45px 0;
+	height: 10px;
+	width: 170px;
+}
+#subnav .news a {
+	background-position: -400px 0;
+}
+#subnav .news .hover {
+	background-position: 0 0;
+}
+#subnav .news.selected a {
+	background-position: -200px 0;
+}
+#subnav .about a {
+	background-position: -400px -100px;
+}
+#subnav .about .hover {
+	background-position: 0 -100px;
+}
+#subnav .about.selected a {
+	background-position: -200px -100px;
+}
+#subnav .contact a {
+	background-position: -400px -200px;
+}
+#subnav .contact .hover {
+	background-position: 0 -200px;
+}
+#subnav .contact.selected a {
+	background-position: -200px -200px;
+}
+#subnav .betrothed a {
+	background-position: -400px -300px;
+}
+#subnav .betrothed .hover {
+	background-position: 0 -300px;
+}
+#subnav .betrothed.selected a {
+	background-position: -200px -300px;
+}
+#subnav .timeline a {
+	background-position: -400px -400px;
+}
+#subnav .timeline .hover {
+	background-position: 0 -400px;
+}
+#subnav .timeline.selected a {
+	background-position: -200px -400px;
+}
+#subnav .gallery a {
+	background-position: -400px -500px;
+}
+#subnav .gallery .hover {
+	background-position: 0 -500px;
+}
+#subnav .gallery.selected a {
+	background-position: -200px -500px;
+}
+#subnav .parents a {
+	background-position: -400px -600px;
+}
+#subnav .parents .hover {
+	background-position: 0 -600px;
+}
+#subnav .parents.selected a {
+	background-position: -200px -600px;
+}
+#subnav .witnesses a {
+	background-position: -400px -700px;
+}
+#subnav .witnesses .hover {
+	background-position: 0 -700px;
+}
+#subnav .witnesses.selected a {
+	background-position: -200px -700px;
+}
+#subnav .polls a {
+	background-position: -400px -800px;
+}
+#subnav .polls .hover {
+	background-position: 0 -800px;
+}
+#subnav .polls.selected a {
+	background-position: -200px -800px;
+}
+#subnav .celebration a {
+	background-position: -400px -900px;
+}
+#subnav .celebration .hover {
+	background-position: 0 -900px;
+}
+#subnav .celebration.selected a {
+	background-position: -200px -900px;
+}
+#subnav .party a {
+	background-position: -400px -1000px;
+}
+#subnav .party .hover {
+	background-position: 0 -1000px;
+}
+#subnav .party.selected a {
+	background-position: -200px -1000px;
+}
+#subnav .honeymoon a {
+	background-position: -400px -1100px;
+}
+#subnav .honeymoon .hover {
+	background-position: 0 -1100px;
+}
+#subnav .honeymoon.selected a {
+	background-position: -200px -1100px;
+}
+#subnav .gifts a {
+	background-position: -400px -1200px;
+}
+#subnav .gifts .hover {
+	background-position: 0 -1200px;
+}
+#subnav .gifts.selected a {
+	background-position: -200px -1200px;
+}
+
+/* sidebar: countdown */
+#countdown {
+	color: #A28138;
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 38%;
+	min-width: 8.6em;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+
+
+#countdown strong {
+	color: 	#006;
+	font-weight: normal;
+}
+#countdown span {
+	text-transform: lowercase;	
+}
+
+#content div.center {
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	width: 50& /*TODO*/
+}
+
+#content h1, #content h2, #content h3 {
+	color: #413200;
+	padding: 1em 0;
+}
+
+#content h2 {
+	font-size: 2.6em;
+	line-height: 1.2em;
+}
+
+#content h3 {
+	font-size: 1.8em;
+	line-height: 1.6em;
+}
+
+#content .subscribe {
+	display: block;
+	float:right;
+	padding:2.48em 0 2.88em 0;
+	line-height: 1.8em;
+	width: 47%;
+}
+
+.center {
+	text-align: center;
+}
+
+.pic.border {
+	margin: 10px 0;
+}
+
+.pic.border img {
+	padding: 10px;
+	background: #006;
+}
+
+#content .highlight {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	padding: 20px 0;
+	text-align: center;	
+}
+
+#content > .single, #content > ul {
+	width: 77.777%;
+	margin: 20px 11.111%;
+}
+
+#content .single {
+	min-height: 150px;	
+}
+
+#content > .single p, #content > ul h3 {
+	width: 96.5714%;
+	margin: 0 1.71428%;	
+}
+
+/* todo: same as ajax_poll */
+#content .single .info, #content .single .text, #content > ul p
+{
+	width: 71.4285%;
+	margin: 0 14.2857%;
+	padding-bottom: 1em;
+}
+
+#content > ul .actions {
+	font-size: 1.2em;	
+}
+
+.pic.left {
+	float: left;
+}
+
+.single .pic.left {
+	overflow: hidden;
+	width: 39.4285%;
+	height: 150px;
+	margin: 0 3.42856% 10px 1.71428%;
+	position: relative;
+}
+.pic.left img {
+	display:block;
+	position:absolute;
+	left: 50%;
+	margin-left: -200px;
+}
+
+
+#content > .left {
+	float: left;
+	width: 44.444%;
+	margin: 20px 11.111%;
+	clear: both;
+}
+
+#content > .right {
+	float: left;
+	width: 22.222%;
+	margin: 20px 0;
+}
+
+#content > .left .item {
+	margin: 1em 3%;
+}
+#content > .right .item {
+	margin: 1em 6%;
+}
+#content .item.first {
+	margin-top: 0;
+}
+
+#content .gallery {
+	clear: both;
+	width: 77.777%;
+	margin: 20px 11.111%;
+	text-align: center;
+}
+
+.gallery .item , .gallery .more {
+	float: left;
+	margin: 20px 1.71428%;
+	text-align: center;
+}
+
+.gallery .item {
+	width: 25.1427%;
+}
+
+.gallery .more {
+	margin-top: 1em;
+	width: 10.8571%;
+	overflow: hidden; /* todo: adjust */
+}
+
+/* language selection page */
+
+body.lang {
+	background: #fc3 none;
+	text-align: center;
+}
+
+body.lang h1, body.lang h2, body.lang fieldset {
+	width: 100%;
+	margin: 50px 0;
+}
+
+body.lang h2 {
+	font: italic 2em "Georgia",times,serif normal;
+	height: 2em;
+	position:relative;
+}
+body.lang h2 span {
+	width: 100%;
+	position: absolute;
+	bottom:0;
+	left:0;
+	color: black; /*#000066;*/
+	font-size: 2.6em;
+	display:none;
+	line-height: 1.2;
+}
+
+body.lang button, body.lang button div {
+	width: 160px;
+	height: 200px;
+	background: url('img/lang.png');
+}
+
+body.lang button div {
+	position: absolute;
+	top: -50%; left: 0px;
+	display: none;
+}
+body.lang button {
+	text-indent: -9999px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	border: none;
+	position:relative;
+}
+
+body.lang button.en {
+	margin-left: 50px;
+	background-position: 0 -200px;
+}
+
+body.lang button.en div {
+	background-position: -160px -200px;
+}
+body.lang button.it div {
+	background-position: -160px 0;
+}
+
+
+/* poll pages */
+
+.detail {
+	width: 77.777%;
+	margin: 20px 11.111%;
+}
+
+.detail .question {
+	font-size: 2em;
+	line-height: 1.2em;
+	width: 96.5714%;
+	margin: 0 1.71428%;	
+}
+
+#ajax_poll {
+	width: 71.4285%;
+	margin: 20px 14.2857%;
+	min-height: 300px;	
+}
+
+#ajax_poll p {
+	text-align: center;
+}
+
+#ajax_poll li {
+	padding: 20px 0;	
+}
+
+.poll_choices li {
+	margin: 0 2.4%;
+}
+
+.poll_choices label {
+	padding-left: 2.4%;
+}
+
+
+a.see_results {
+	padding-left: 4%;
+}
+
+.poll_results {
+	font-size: 1.2em;
+}
+
+.poll_results .label {
+	width: 35.2%;
+	text-align: right;
+	padding: 0 2.4%;
+}
+
+.poll_results .num_votes {
+	float: right;
+	width: 15.2%;
+	padding: 0 2.4%;
+	font-size: 0.6em;
+}
+	
+.poll_results .hist_wrapper {
+	position: relative;
+	height: 1.3em;
+	background-color: #fc3;
+	margin: 0 2.4%;
+	width: 35.2%;
+	border: 1px solid;
+	border-color: white;
+	float: right;
+}
+
+.poll_results .hist {
+	position: absolute;
+	top: 0; left: 0;
+	overflow: hidden;	
+	background: url('img/hist-gradient.png') repeat-y;
+	height: 100%;
+}
+
+#ajax_poll .actions {
+	text-align: center;	
+}
+
+/* wedding party confirmation page */
+
+.item.errors {
+	color: red;
+	background-color: #fc3;
+	border: 1px solid red;
+	text-align: center;	
+}
+
+input {
+	border: 1px solid;
+	border-color: #333;
+	color: inherit;
+}
+
+.error {
+	background-color: #fcc;
+	border-color: #f66;	
+}
+
+.submit {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff #413200 #413200 #fff;
+	background-color: #fc3;
+	color: inherit;
+	font-weight: bold;
+	padding: 2px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+.left label, .left input {
+	margin: 0 3%;
+}
+
+.left label {
+	width: 44%;
+	text-align: right;	
+	float:left;
+	line-height: 1.6em;
+	margin-right: 6%;
+}
+.left input {
+	display: block;
+}
+.left .submit {
+	margin: 0 auto;
+}
+#editconfirmation {
+	display: none;
+}
+
+/* news */
+.author {
+	text-transform: capitalize;	
+}
+
+/* footer */

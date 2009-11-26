@@ -1,0 +1,16 @@
+{% extends 'no_sidebar.djhtml' %}
+{% load i18n %}
+{% block meta_title %}{% trans 'Page not found'%}{% endblock %}
+{% block title %}{% trans 'Page not found'%}{% endblock %}
+{% block content %}
+<div class="single">
+	<div class="pic center border">
+		<img src="/img/not-found.png" 
+			alt="{% trans 'Page not found' %} (404)"
+			title="{% trans 'Page not found' %} (404)" />
+	</div>
+	<p class="highlight">
+		{% blocktrans with "/home/" as home %}404_body with {{home}}{% endblocktrans %}
+	</p>
+</div>
+{% endblock %}

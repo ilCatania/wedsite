@@ -1,0 +1,12 @@
+<html>
+<head>
+	<meta name="ROBOTS" content="NOINDEX" />
+</head>
+<body>
+<form method="post" action="do/">
+	<p><label for="u">Username</label> <input type="text" id="u" name="u" /></p>
+	<p><label for="p">Password</label> <input type="password" id="p" name="p" /></p>
+	<p><input type="submit" name="login" value="login" /></p>
+</form>
+</body>
+</html>

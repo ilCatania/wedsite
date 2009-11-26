@@ -1,0 +1,2 @@
+{% extends 'base.djhtml' %}
+{% block content_class %}no_sidebar{% endblock %}
