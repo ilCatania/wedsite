@@ -1,0 +1,7 @@
+drop table todolist_todoitem;
+drop table todolist_todolist;
+drop table todolist_todoitem_translation;
+drop table todolist_todolist_translation;
+drop table todolist_sticamecator;
+drop table todolist_gionni;
+drop table todolist_gionni_translation;

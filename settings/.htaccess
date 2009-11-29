@@ -18,7 +18,11 @@ AuthName ceciliaegabriele.heliohost.org
 IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
 
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 RewriteBase /
+RewriteRule ^robots\.txt$ - [L,PT]
 RewriteRule ^(dispatch\.wsgi/.*)$ - [L]
 RewriteRule ^media/(.*) django_admin_media/$1 [PT]
 RewriteRule ^(wedsite_static|django_admin_media)(/.+/.*\..*)$ - [L]

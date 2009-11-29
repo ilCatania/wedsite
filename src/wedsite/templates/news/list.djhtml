@@ -2,20 +2,25 @@
 {% load i18n nav %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<ul>{% for item in news_items %}
-	<li class="item{% if forloop.first %} first{% endif %}">
-		<h3><a href="/home/news/{{item.slug}}/">{{item.title}}</a></h3>
-		<p class="info">
-			{%trans "posted by" %} <span class="author">{{ item.author.username }}</span>
-			{% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span>
-		</p>
-		<p class="text">
-			{% ifequal item.author.username "cecilia" %}
-				{{item.text|escape|truncatewords:80}}
-			{% else %}
-				{{item.text|safe|truncatewords_html:80}}
-			{% endifequal %}
-		</p>
-	</li>
-{% endfor %}</ul>
+<div class="c5 l2 r2">
+	<ul>{% for item in news_items %}
+		<li>
+			<h2><a href="/home/news/{{item.slug}}/">{{item.title}}</a></h3>
+			<p class="info">
+				{%trans "posted by" %} <span class="author">{{ item.author.username }}</span>
+				{% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span>
+			</p>
+			<div class='text'>
+				{% ifequal item.author.username "cecilia" %}
+					<p>{{item.text|escape|truncatewords:40}}</p>
+				{% else %}
+					{{item.text|safe|truncatewords_html:40}}
+				{% endifequal %}
+				<p class="actions">
+					<a href="/home/news/{{item.slug}}/">{% trans "Read more" %}...</a>
+				</p>
+			</div>
+		</li>
+	{% endfor %}</ul>
+</div>
 {% endblock %}

@@ -177,12 +177,12 @@ $.fn.marriageCountdown = function() {
 	var opts = {
 		'format': 'yodhms', 
 		'layout': 
-			'{y<}<strong>{yn}</strong> {yl}, {y>}' +
-			'{o<}<strong>{on}</strong> {ol}, {o>}' +
-			'{d<}<strong>{dn}</strong> {dl}, {d>}' +
-			'{h<}<strong>{hn}</strong> {hl}, {h>}' +
-			'{m<}<strong>{mn}</strong> {ml} ' + gettext('and') +' {m>}' +
-			'{s<}<strong>{sn}</strong> {sl}{s>}',
+			'<table>{y<}<tr><td class="col1"><strong>{yn}</td><td class="col2">{yl},</td></tr>{y>}' +
+			'{o<}<tr><td class="col1">{on}</td><td class="col2">{ol},</td></tr>{o>}' +
+			'{d<}<tr><td class="col1">{dn}</td><td class="col2">{dl},</td></tr>{d>}' +
+			'{h<}<tr><td class="col1">{hn}</td><td class="col2">{hl},</td></tr>{h>}' +
+			'{m<}<tr><td class="col1">{mn}</td><td class="col2">{ml} ' + gettext('and') +'</td></tr>{m>}' +
+			'{s<}<tr><td class="col1">{sn}</td><td class="col2">{sl}{s>}</td></table>',
 		'labels': [gettext('yy'), gettext('MM'), gettext('ww'),
 		           gettext('dd'), gettext('HH'), gettext('mm'),
 		           gettext('ss')], 
@@ -192,7 +192,17 @@ $.fn.marriageCountdown = function() {
 	};
 
 	var setCountdownContent = function(jq, text, options) {
-		var $span = jq.html(text).find('span');
+		var $span = jq.html('<p>'+text+'</p>' +
+				'<p>(<a href="javascript:void(0)" id="hide_countdown">' +
+				gettext('hide_countdown') + '</a>)</p>'
+				).find('span');
+		$('#hide_countdown').click(function(){
+			jq.empty().html('<p>(<a href="javascript:void(0)" id="show_countdown">' +
+					gettext('show_countdown') + '</a>)</p>');
+			$('#show_countdown').click(function(){
+				jq.marriageCountdown();
+			});
+		});
 		if(options) return $span.countdown(options);
 		return $span;
 	};

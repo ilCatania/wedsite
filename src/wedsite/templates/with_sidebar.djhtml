@@ -3,7 +3,9 @@
 {% block sidebar %}
 	<div id="sidebar">
 		{% subnav %}
-		{% block sidecontent %}<div id="countdown"></div>{% endblock %}
+		{% block sidecontent %}<div id="countdown">
+			{% trans "Enable javascript to see the countdown" %}
+		</div>{% endblock %}
 	</div>
 {% endblock %}
 {% block content_class %}with_sidebar{% endblock %}

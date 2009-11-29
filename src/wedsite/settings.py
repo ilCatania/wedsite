@@ -115,6 +115,7 @@ INSTALLED_APPS = (
     #'multilingual.flatpages',
     'wedsite',
     'wedsite.ipsecurity',
+    'wedsite.activities',
     'wedsite.nav',
     'wedsite.feeds',
     'wedsite.news',

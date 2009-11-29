@@ -62,7 +62,8 @@ def confirm(request):
         return make_response(request)
         
     hash_codes = get_confirmation_hash_codes(request)
-    if not hash_codes: return make_response(request)
+    if request.method != 'POST' or (CREATE_ACTION not in request.POST and not hash_codes):
+        return make_response(request)
 
     saved_confirmations = models.PartyConfirmation.objects.filter(hash_code__in=hash_codes)
 

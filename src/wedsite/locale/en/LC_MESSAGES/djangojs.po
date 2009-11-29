@@ -28,6 +28,12 @@ msgstr "Cecilia and Gabriele have been married for"
 msgid "getting_married_now"
 msgstr "Cecilia and Gabriele are getting married right now!"
 
+msgid "hide_countdown"
+msgstr "hide countdown"
+
+msgid "show_countdown"
+msgstr "show countdown"
+
 msgid "and"
 msgstr "and"
 

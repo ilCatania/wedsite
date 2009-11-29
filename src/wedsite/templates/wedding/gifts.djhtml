@@ -1,7 +1,7 @@
 {% extends 'section_home.djhtml' %}
 {% load i18n %}
 {% block section_intro %}
-	<div class="pic left"><img src="/img/villa-moroni.jpg"/></div>
+	<div class="pic left"><img src="/img/villa-moroni.jpg" alt='{% trans "Moroni Mansion" %}'/></div>
 	<p>
 			GIFTS: TODO
 	</p>

@@ -1,0 +1,14 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n %}
+{% block meta_title %}{% trans "Wedding" %} | {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
+{% block title %}{% trans "The wedding" %}{% endblock %}
+{% block content %}
+<div class="c7 l1 r1">
+	{{ list_description|safe }}
+</div>
+<div class="c5 l2 r2">
+	<ol class="checklist">{% for item in list_items %}
+		<li{% if item.done %} class='done'{% endif %}><p>{{ item.item_body|escape }}</p></li>
+	{% endfor %}</ol>
+</div>
+{% endblock %}

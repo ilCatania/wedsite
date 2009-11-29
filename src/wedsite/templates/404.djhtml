@@ -3,8 +3,8 @@
 {% block meta_title %}{% trans 'Page not found'%}{% endblock %}
 {% block title %}{% trans 'Page not found'%}{% endblock %}
 {% block content %}
-<div class="single">
-	<div class="pic center border">
+<div class="center">
+	<div class="pic border">
 		<img src="/img/not-found.png" 
 			alt="{% trans 'Page not found' %} (404)"
 			title="{% trans 'Page not found' %} (404)" />

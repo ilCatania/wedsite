@@ -1,47 +1,60 @@
-{% extends 'section_home.djhtml' %}
+{% extends 'with_sidebar.djhtml' %}
 {% load i18n %}
-{% block section_intro %}
-	<div class="pic left"><img src="/img/home-noi.jpg"/></div>
+{% block title %}{% trans "Welcome"%}!{% endblock %}
+{% block content %}<div class='c7 l1 r1 with_image'>
+	<div class='pic left'><img src='/img/home-noi.jpg' alt='{% trans "Cecilia and Gabriele" %}'/></div>
 	<p>{% blocktrans with "/wedding/" as wedding %}home_intro_p1 with {{wedding}}{% endblocktrans %}</p>
 	<p>{% blocktrans with "/wedding/party/" as confirm %}home_intro_p2 with {{confirm}}{% endblocktrans %}</p>
 	<p>{% blocktrans with "http://www.openmindonline.it/" as job and "/wip/" as wip %}home_intro_p3 with {{wip}},{{job}},{{feed_url}}{% endblocktrans %}</p>
-{% endblock %}
-{% block left%}
-<div class="subscribe"><a href="{{feed_url}}">{% trans "Subscribe to RSS" %}</a></div>
-<h3><a href="news/latest/">{% trans "Latest news" %}</a></h3>
-	{% for item in news_items %}
-		<div class="item{% if forloop.first %} first{% endif %}">
-			<h4><a href="/home/news/{{item.slug}}/">{{item.title}}</a></h4>
-			<div class="info">{%trans "posted by" %}
-			<span class="author">{{ item.author }}</span> {% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span></div>
-			<div class="text">
+</div>
+<div class="c4 l1 r1">
+	<h2>
+		<a href='news/latest/'>{% trans "Latest news" %}</a>
+		<a href='{{feed_url}}'>
+			<img src='/img/rss.png' 
+				alt='({% trans "Subscribe to RSS" %})' 
+				title='{% trans "Subscribe to RSS" %}' />
+		</a>
+	</h2>
+	<ul>{% for item in news_items %}
+		<li>
+			<h3><a href='/home/news/{{item.slug}}/'>{{item.title}}</a></h3>
+			<p class='info'>{%trans "posted by" %}
+				<span class='author'>{{ item.author }}</span>
+				{% trans "on" %}
+				<span class='date'>{{item.pub_date|date}} {{item.pub_date|time}}</span>
+			</p>
+			<div class='text'>
 				{% ifequal item.author.username "cecilia" %}
-					{{item.text|escape|truncatewords:80}}
+					<p>{{item.text|escape|truncatewords:25}}</p>
 				{% else %}
-					{{item.text|safe|truncatewords_html:80}}
+					{{item.text|safe|truncatewords_html:25}}
 				{% endifequal %}
-				<span class="actions"><a href="/home/news/{{item.slug}}/">{% trans "Read more" %}</a></span>
+				<p class="actions">
+					<a href="/home/news/{{item.slug}}/">{% trans "Read more" %}...</a>
+				</p>
 			</div>
-		</div>
-	{% endfor %}
-{% endblock %}
-{% block right %}
-	<h3><a href="/you/polls/">{% trans "Latest polls" %}</a></h3>
-	{% for item in polls %}
-		<div class="item{% if forloop.first %} first{% endif %}">
-			<div class="question">{% if item.singlechoicepoll %}{{item.singlechoicepoll.question}}{% else %}{{item.percentagepoll.question}}{%endif%}</div>
-			<div class="actions">
-				<a href="/you/polls/{{item.slug}}/#answer">{% trans "Answer" %}</a> |
-				<a href="/you/polls/{{item.slug}}/#results">{% trans "See results" %}</a>
-			</div>
-		</div>
-	{% endfor %}
-{% endblock %}
+		</li>
+	{% endfor %}</ul>
+</div>
+<div class="c2 r1">
+	<h2><a href='/you/polls/'>{% trans "Latest polls" %}</a></h2>
+	<ul>{% for item in polls %}
+		<li>
+			<p class='question'>{% if item.singlechoicepoll %}{{item.singlechoicepoll.question}}{% else %}{{item.percentagepoll.question}}{%endif%}</p>
+			<p class='actions'>
+				<a href='/you/polls/{{item.slug}}/#answer'>{% trans "Answer" %}</a> |
+				<a href='/you/polls/{{item.slug}}/#results'>{% trans "See results" %}</a>
+			</p>
+		</li>
+	{% endfor %}</ul>
+</div>{% endblock %}
+
 {% block gallery %}
 	{% if False %} <!-- TODO: implement galleries -->
 	<h3>Ultime immagini caricate</h3>
 		<div class="item">
-			<img src="/img/thumb.jpg"/>
+			<img src="/img/thumb.jpg" alt='TODO'/>
 		</div>
 		<div class="item">
 			<img src="/img/thumb.jpg"/>

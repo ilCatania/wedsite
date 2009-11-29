@@ -2,13 +2,21 @@
 {% load i18n nav %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<ul>{% for item in polls %}
-	<li{% if forloop.first %} class="first"{% endif %}>
-		<h3>{% if item.singlechoicepoll %}{{item.singlechoicepoll.question}}{% else %}{{item.percentagepoll.question}}{%endif%}</h3>
-		<p class="actions">
-			<a href="/you/polls/{{item.slug}}/#answer">{% trans "Answer" %}</a> | 
-			<a href="/you/polls/{{item.slug}}/#results">{% trans "See results" %}</a>
-		</p>
-	</li>
-{% endfor %}</ul>
+<div class='c5 l2 r2'>
+	<ul>{% for item in polls %}
+		<li>
+			<h3>
+				{% if item.singlechoicepoll %}
+					{{item.singlechoicepoll.question}}
+				{% else %}
+					{{item.percentagepoll.question}}
+				{%endif%}
+			</h3>
+			<p class="actions">
+				<a href="/you/polls/{{item.slug}}/#answer">{% trans "Answer" %}</a> | 
+				<a href="/you/polls/{{item.slug}}/#results">{% trans "See results" %}</a>
+			</p>
+		</li>
+	{% endfor %}</ul>
+</div>
 {% endblock %}

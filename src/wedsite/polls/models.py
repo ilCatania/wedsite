@@ -50,10 +50,10 @@ class Choice(Answer):
     order = models.PositiveIntegerField()
     class Translation(multilingual.Translation):
         choice = models.CharField(max_length=200)
-        def __unicode__(self):
-            return self.choice
+    def __unicode__(self):
+        return self.choice or u'(empty)'
     class Meta:
-        ordering = ('order',)
+        ordering = ('poll', 'order',)
     def save(self, **kwargs):
         if 'user' in kwargs:
             user = kwargs['user']

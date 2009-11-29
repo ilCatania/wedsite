@@ -3,7 +3,7 @@
 <ol class="poll_choices">
 {% for choice in poll.singlechoicepoll.choice_set.all %}
 	<li>
-		<input type="radio" name="voted" id="choice_{{ choice.order }}" value="{{ choice.order }}" />
+		<input type="radio" name="voted" id="choice_{{ choice.order }}" value="{{ choice.order }}" class="choice" />
 		<label for="choice_{{ choice.order }}">{{ choice.choice }}</label>
 	</li>
 {% endfor %}

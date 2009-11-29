@@ -1,9 +1,9 @@
 {% load i18n %}
 <form action='vote/' method='post'>
 {% block form_content %} {% endblock %}
-<input type="submit" name="vote" value="{% trans 'Vote!' %}" class="submit"/>
-<span class="actions">
+<p class="actions">
+	<input type="submit" name="vote" value="{% trans 'Vote!' %}" class="submit"/>
 	<a class="see_results" href="#results">{% trans 'See the results' %}</a>
-</span>
+</p>
 </form>
 <script type="text/javascript">$('#ajax_poll form').setupAjaxPollForm();</script>

@@ -3,11 +3,12 @@
 {% block meta_title %}Language selection - Cecilia &amp; Gabriele{% endblock %}
 {% block body %}<h1><img src="/img/logo400.png" alt="Cecilia &amp; Gabriele"/></h1>
 <h2><span class="it">si sposano!</span><span class="en">they're getting married!</span></h2>
-<form action="setlang/" method="POST">
+<form action="setlang/" method="post">
 	<fieldset>
 		<input name="next" type="hidden" value="/home/" />
 		{% for lang in LANGUAGES %}<button type="submit" class="{{ lang.0 }}" value="{{ lang.0 }}" name="language" title="{{ lang.1 }}">{{ lang.1 }}</button>
 		{% endfor %}
 	</fieldset>
 </form>
+<div><a href="/home/">{% trans "Proceed with current language" %}</a></div>
 {% endblock %}

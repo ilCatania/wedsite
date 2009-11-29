@@ -28,6 +28,12 @@ msgstr "Cecilia e Gabriele sono sposati da"
 msgid "getting_married_now"
 msgstr "Cecilia e Gabriele si stanno sposando proprio adesso!"
 
+msgid "hide_countdown"
+msgstr "nascondi conto alla rovescia"
+
+msgid "show_countdown"
+msgstr "mostra conto alla rovescia"
+
 msgid "and"
 msgstr "e"
 

@@ -3,8 +3,14 @@
 {% block meta_title %}{% trans "Poll" %}{% endblock %}
 {% block title %}{% trans "Poll" %}{% endblock %}
 {% block content %}
-<div class="single">
-		<h3>{% if poll.singlechoicepoll %}{{poll.singlechoicepoll.question}}{% else %}{{poll.percentagepoll.question}}{%endif%}</h3>
+<div class="c5 l2 r2">
+		<h3>
+			{% if poll.singlechoicepoll %}
+				{{poll.singlechoicepoll.question}}
+			{% else %}
+				{{poll.percentagepoll.question}}
+			{%endif%}
+		</h3>
 		<div id="ajax_poll">
 		</div>
 </div>

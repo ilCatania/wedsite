@@ -1,7 +1,7 @@
 {% load i18n %}
 {% if already_voted %}<p>{% trans 'You already cast your vote in this poll.' %}</p>{% endif %}
 {% block results %}{% endblock %}
-<div class="actions">
+<p class="actions">
 	{% if not already_voted %}<a href="#answer">{%trans 'Open the vote form' %}</a> |{% endif %}
 	<a href="/you/polls/">{% trans 'Back to polls list' %}</a>
-</div>
+</p>

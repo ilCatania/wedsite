@@ -19,7 +19,7 @@
 </div>
 {% endif %}
 	<div id="header">{% block header %}
-		<form action="/lang/setlang/" method="POST">
+		<form action="/lang/setlang/" method="post">
 			<fieldset class="lang">
 				{% for lang in LANGUAGES %}<button type="submit" class="{{ lang.0 }} {% ifequal lang.0 LANGUAGE_CODE %}disabled{% else %}enabled{% endifequal %}" value="{{ lang.0 }}" name="language" title="{{ lang.1 }}"{% ifequal lang.0 LANGUAGE_CODE %} disabled="disabled"{% endifequal %}>{{ lang.1 }}</button>
 				{% endfor %}
