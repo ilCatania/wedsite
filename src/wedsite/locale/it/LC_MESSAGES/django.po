@@ -217,7 +217,6 @@ msgid "Proceed with current language"
 msgstr "Prosegui con la lingua corrente"
 
 #: .\templates\news\detail.djhtml.py:19
-#, fuzzy
 msgid "Back to latest news"
 msgstr "Ultime news"
 

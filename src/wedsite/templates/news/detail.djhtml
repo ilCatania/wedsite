@@ -6,14 +6,14 @@
 <div class="c5 l2 r2">
 	<h2><a name="top">{{ newsitem.title }}</a></h2>
 			<p class="info">
-				{%trans "posted by" %} <span class="author">{{ item.author.username }}</span>
-				{% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span>
+				{%trans "posted by" %} <span class="author">{{ newsitem.author.username }}</span>
+				{% trans "on" %} <span class="date">{{newsitem.pub_date|date}} {{newsitem.pub_date|time}}</span>
 			</p>
 			<div class='text'>
-				{% ifequal item.author.username "cecilia" %}
-					<p>{{item.text|escape}}</p>
+				{% ifequal newsitem.author.username "cecilia" %}
+					<p>{{newsitem.text|escape}}</p>
 				{% else %}
-					{{item.text|safe}}
+					{{newsitem.text|safe}}
 				{% endifequal %}
 				<p class="actions">
 					<a href="/home/news/latest/">{% trans "Back to latest news" %}</a> |
