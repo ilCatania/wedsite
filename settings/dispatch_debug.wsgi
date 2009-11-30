@@ -73,16 +73,24 @@ class WSGIHandler(base.BaseHandler):
             return str(response)
         except:
             type, value, tb = sys.exc_info()
-            test = str([sys.stderr,  type.__name__, ":", value.message, sys.stderr, '\n'.join(traceback.format_tb(tb))])
+            #test = str([sys.stderr,  type.__name__, ":", value.message, sys.stderr, '\n'.join(traceback.format_tb(tb))])
+            test = str([type.__name__, ":", value.message, '\n'.join(traceback.format_tb(tb))])
 
 
 
-_application = WSGIHandler()
 def application(environ, start_response):
     #dunno why it's not populated, set it manually
     #environ['PATH_INFO'] = u'/dispatch.wsgi' + environ['PATH_INFO']
     #environ['PATH_INFO'] = environ['SCRIPT_NAME'] + environ['PATH_INFO']
-    test = _application(environ, start_response)
+    try:
+            _application = WSGIHandler()
+            test = _application(environ, start_response)
+    except:
+        type, value, tb = sys.exc_info()
+        #test = sys.stderr #str([sys.stderr,  type.__name__, ":", value.message, sys.stderr, '\n'.join(traceback.format_tb(tb))])
+        test = str(value) #str([type.__name__, ":", value.message]) #,'\n'.join(traceback.format_tb(tb))])
+    else:
+        test = 'stica'
     status = '200 OK' 
     response_headers = [('Content-type', 'text/plain'),
                         ('Content-Length', str(100+len(test)))]

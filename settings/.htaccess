@@ -23,8 +23,10 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 RewriteBase /
 RewriteRule ^robots\.txt$ - [L,PT]
+#RewriteRule ^(dispatch_debug\.wsgi/.*)$ - [L]
 RewriteRule ^(dispatch\.wsgi/.*)$ - [L]
 RewriteRule ^media/(.*) django_admin_media/$1 [PT]
 RewriteRule ^(wedsite_static|django_admin_media)(/.+/.*\..*)$ - [L]
 RewriteRule ^(img|layout|js)/(.*)\.(.*)$ wedsite_static/$1/$2.$3 [L,PT]
+#RewriteRule ^(.*)$ dispatch_debug.wsgi/$1 [QSA,PT,L]
 RewriteRule ^(.*)$ dispatch.wsgi/$1 [QSA,PT,L]
