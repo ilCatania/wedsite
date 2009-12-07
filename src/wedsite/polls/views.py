@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import ugettext_lazy as _
-from wedsite.ipsecurity.decorators import limit_daily_actions
+from wedsite.security.decorators import limit_daily_actions
 
 POLLS_VOTED_COOKIE ='polls_voted'
 SEPARATOR = '^$^'

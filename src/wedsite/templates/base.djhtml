@@ -28,12 +28,14 @@
 		{% mainnav %}
 		<h1>{% block title %}{% if title %}{{ title }}{% else %}Cecilia &amp; Gabriele{% endif %}{% endblock %}</h1>
 	{% endblock %}</div>
-	{% block sidebar %}{% endblock %}
-	<div id="content"
-		class="{% block content_class %}{% endblock%}{% if content_class %} {{content_class}}{% endif %}">
-		{% block content %}{% endblock %}
+	<div id="body">
+		{% block sidebar %}{% endblock %}
+		<div id="content"
+			class="{% block content_class %}{% endblock%}{% if content_class %} {{content_class}}{% endif %}">
+			{% block content %}{% endblock %}
+		</div>
+		<div class="clearfix"></div><!-- ugly hack to make delivery -->
 	</div>
-	<div class="clearfix"></div><!-- ugly hack to make delivery -->
 	<div id="footer">{% block footer %}
 		{% blocktrans with "webmaster@ceciliaegabriele.heliohost.org" as mail %}footer with {{mail}}{% endblocktrans %}
 	{% endblock %}</div>

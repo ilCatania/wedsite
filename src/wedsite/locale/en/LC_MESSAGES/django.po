@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-29 23:31+0100\n"
+"POT-Creation-Date: 2009-12-06 15:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "Unable to delete: %s"
 msgid "Confirmation deleted successfully!"
 msgstr "Confirmation deleted successfully!"
 
-#: .\news\urls.py:12 .\templates\home\home.djhtml.py:12
+#: .\news\urls.py:11 .\templates\home\home.djhtml.py:12
 msgid "Latest news"
 msgstr "Latest news"
 
@@ -114,7 +114,7 @@ msgstr "Internal server error"
 msgid "500_body"
 msgstr "Sorry! Looks like something went awfully wrong."
 
-#: .\templates\base.djhtml.py:38
+#: .\templates\base.djhtml.py:40
 #, python-format
 msgid "footer with %(mail)s"
 msgstr ""
@@ -190,17 +190,18 @@ msgstr ""
 msgid "Subscribe to RSS"
 msgstr "Subscribe to RSS"
 
-#: .\templates\home\home.djhtml.py:22 .\templates\news\detail.djhtml.py:9
-#: .\templates\news\list.djhtml.py:10
+#: .\templates\home\home.djhtml.py:22 .\templates\news\all.djhtml.py:10
+#: .\templates\news\detail.djhtml.py:9 .\templates\news\list.djhtml.py:10
 msgid "posted by"
 msgstr "posted by"
 
-#: .\templates\home\home.djhtml.py:24 .\templates\news\detail.djhtml.py:10
-#: .\templates\news\list.djhtml.py:11
+#: .\templates\home\home.djhtml.py:24 .\templates\news\all.djhtml.py:11
+#: .\templates\news\detail.djhtml.py:10 .\templates\news\list.djhtml.py:11
 msgid "on"
 msgstr "on"
 
-#: .\templates\home\home.djhtml.py:34 .\templates\news\list.djhtml.py:20
+#: .\templates\home\home.djhtml.py:34 .\templates\news\all.djhtml.py:20
+#: .\templates\news\list.djhtml.py:20
 msgid "Read more"
 msgstr "Read more"
 
@@ -216,10 +217,29 @@ msgstr "See results"
 msgid "Proceed with current language"
 msgstr "Proceed with current language"
 
+#: .\templates\news\all.djhtml.py:28
+msgid "First page"
+msgstr "First page"
+
+#: .\templates\news\all.djhtml.py:29
+msgid "Previous page"
+msgstr "Previous page"
+
+#: .\templates\news\all.djhtml.py:31
+msgid "page"
+msgstr "page"
+
+#: .\templates\news\all.djhtml.py:33
+msgid "Next page"
+msgstr "Next page"
+
+#: .\templates\news\all.djhtml.py:34
+msgid "Last page"
+msgstr "Last page"
+
 #: .\templates\news\detail.djhtml.py:19
-#, fuzzy
 msgid "Back to latest news"
-msgstr "Latest news"
+msgstr "Back to latest news"
 
 #: .\templates\news\detail.djhtml.py:20
 msgid "Complete news archive"
@@ -263,7 +283,119 @@ msgstr "Gabriele voted this"
 msgid "Poll"
 msgstr "Poll"
 
-#: .\templates\wedding\gifts.djhtml.py:4 .\templates\wedding\party.djhtml.py:4
+#: .\templates\wedding\gifts.djhtml.py:4
+msgid "gifts_intro_p1"
+msgstr ""
+"Expressions like \"fulfilling their dreams of love\" and \"committing to "
+"each other in everlasting love\" undoubtedly have a striking sound to them. "
+"Getting married and moving in to live togheter, however, has a slew of "
+"unavoidable logistic aspects, which we are sure many of our readers are "
+"already familiar with, that involve non-sticking frying pans, ugly "
+"centerpieces, LED televisions and the like."
+
+#: .\templates\wedding\gifts.djhtml.py:5
+msgid "gifts_intro_p2"
+msgstr ""
+"Many friends and relatives of ours, upon receiving the wedding invitation, "
+"manifested their wish to contribute to our families' economic effort, a "
+"commendable wish to which we are more than willing to comply (which is, "
+"truth be told, also advantageous to us). So here comes this web page, "
+"displaying a handy prioritized list with all the possible ways in which you "
+"can sustain the birth and initial growth of our new family, down to its more "
+"palpable aspects."
+
+#: .\templates\wedding\gifts.djhtml.py:9
+#, python-format
+msgid "gifts_li_celebration with %(url_celebr)s"
+msgstr ""
+"<p>The best way , and also probably the cheapest one, to help us is by "
+"attending the <a href='%(url_celebr)s'>wedding celebration</a>. Without the "
+"friendship and guidance of many of you we probably wouldn't have even met, "
+"for sure we wouldn't have decided to marry: we therefore ask you to keep "
+"helping us by attending the ceremony. <strong>Disclaimer</strong>:  this "
+"mode is not exclusive and may, at your discretion, be adopted in conjunction "
+"with one or more of the following.</p>"
+
+#: .\templates\wedding\gifts.djhtml.py:11
+#, python-format
+msgid "gifts_honeymoon_start with %(url_honeymoon)s"
+msgstr ""
+"A way to earn a fair chance of receiving a postcard from Polynesia is "
+"sustaining economically our <a href='%(url_honeymoon)s'>honeymoon</a>. This "
+"can be accomplished easily in either of two ways. One involves executing a "
+"credit transfer directly to the travel agency, making sure to fill the "
+"reason for payment. Bank coordinates follow:"
+
+#: .\templates\wedding\gifts.djhtml.py:13
+msgid "Reason for payment"
+msgstr "Reason for payment"
+
+#: .\templates\wedding\gifts.djhtml.py:15
+msgid "Recipient"
+msgstr "Recipient"
+
+#: .\templates\wedding\gifts.djhtml.py:17
+msgid "Bank subsidiary"
+msgstr "Bank subsidiary"
+
+#: .\templates\wedding\gifts.djhtml.py:19
+msgid "IBAN code"
+msgstr "IBAN code"
+
+#: .\templates\wedding\gifts.djhtml.py:22
+#, python-format
+msgid "gifts_honeymoon_end with %(url_bluvac_age)s"
+msgstr ""
+"After having performed the transfer, all you need is to send the CRO number "
+"(as soon as the bank makes it available) to the travel agency, using the fax "
+"number (+39) 02 32006419. The second way, probably simpler, is heading to "
+"the closest <a href='%(url_bluvac_age)s'>Bluvacanze agency</a> and pay by "
+"cash there."
+
+#: .\templates\wedding\gifts.djhtml.py:25
+#, python-format
+msgid "gifts_weddinglist_start with %(url_kasan)s"
+msgstr ""
+"The most traditional wedding list is available instead for those who, when "
+"invited for a dinner <em>chez nous</em>, wants to be able to point his "
+"finger and yell \"Hey! That was my present!\". We decided to give you the "
+"chance to satisfy this primal urge for self-identification, and it's as easy "
+"as clicking on <a href='%(url_kasan)s'>Kasanova</a>'s website and filling in "
+"the blue form on the top left with the following data:"
+
+#: .\templates\wedding\gifts.djhtml.py:27
+msgid "Username"
+msgstr "Username"
+
+#: .\templates\wedding\gifts.djhtml.py:29
+msgid "Password"
+msgstr "Password"
+
+#: .\templates\wedding\gifts.djhtml.py:32
+#, python-format
+msgid "gifts_weddinglist_end with %(url_kasan_shops)s"
+msgstr ""
+"For those who instead want to see and touch stuff before buying, and for those who "
+"during the years have learned that trusting computers often leads to "
+"unpredictable results, the best option is heading to one of the many <a "
+"href='%(url_kasan_shops)s'>Kasanova shops</a> and asking for the wedding "
+"list under our name."
+
+#: .\templates\wedding\gifts.djhtml.py:34
+#, python-format
+msgid "gifts_li_other with %(mail_contact)s"
+msgstr ""
+"<p>The last, more expensive and elaborate option concerns the technological "
+"elements that will help Cecilia with the housework and Gabriele with his "
+"hunger for new gadgets (or, more probably, the other way around). These "
+"objects weren't included in the previous options because we decided to "
+"procrastinate their purchase, thus enjoying the drop in price that usually "
+"takes place after Christmas. If you wish to do your part for the purchase of "
+"a fridge, tv, microwave, Dolby surround and the like, or perhaps if you have "
+"some models you can suggest us, feel free to <a href='%(mail_contact)"
+"s'>contact us</a>.</p>"
+
+#: .\templates\wedding\party.djhtml.py:4
 msgid "Moroni Mansion"
 msgstr "Moroni Mansion"
 
@@ -385,16 +517,13 @@ msgstr ""
 "(yes, they do have one)"
 
 #: .\templates\wedding\wedding.djhtml.py:3
-#, fuzzy
 msgid "Wedding"
-msgstr "wedding"
+msgstr "Wedding"
 
 #: .\templates\wedding\wedding.djhtml.py:3
-#, fuzzy
 msgid "Cecilia &amp; Gabriele"
-msgstr "Cecilia &amp; Gabriele are getting married!"
+msgstr "Cecilia &amp; Gabriele"
 
 #: .\templates\wedding\wedding.djhtml.py:4
-#, fuzzy
 msgid "The wedding"
-msgstr "wedding"
+msgstr "The wedding"

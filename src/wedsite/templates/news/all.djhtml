@@ -1,0 +1,39 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<div class="c5 l2 r2">
+	<ul>{% for item in news_list %}
+		<li>
+			<h2><a href="/home/news/{{item.slug}}/">{{item.title}}</a></h3>
+			<p class="info">
+				{%trans "posted by" %} <span class="author">{{ item.author.username }}</span>
+				{% trans "on" %} <span class="date">{{item.pub_date|date}} {{item.pub_date|time}}</span>
+			</p>
+			<div class='text'>
+				{% ifequal item.author.username "cecilia" %}
+					<p>{{item.text|escape|truncatewords:40}}</p>
+				{% else %}
+					{{item.text|safe|truncatewords_html:40}}
+				{% endifequal %}
+				<p class="actions">
+					<a href="/home/news/{{item.slug}}/">{% trans "Read more" %}...</a>
+				</p>
+			</div>
+		</li>
+	{% endfor %}</ul>
+	{% if is_paginated %}
+		<p class="pagination">
+			{% if has_previous %}
+				<a href='../1/'>{% trans "First page" %}</a> |
+				<a href='../{{ previous }}/'>{% trans "Previous page" %}</a> |
+			{% endif %}
+			{% trans "page" %} {{ page }}
+			{% if has_next %}
+				| <a href='../{{ next }}/'>{% trans "Next page" %}</a> |
+				<a href='../last/'>{% trans "Last page" %}</a>
+			{% endif %}
+		</p>
+	{% endif %}
+</div>
+{% endblock %}

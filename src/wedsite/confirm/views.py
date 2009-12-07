@@ -15,7 +15,7 @@ except ImportError:
     from django.utils import simplejson as json #pre-2.6 fallback
 import models
 import forms
-from wedsite.ipsecurity.decorators import limit_daily_actions
+from wedsite.security.decorators import limit_daily_actions
 
 SEPARATOR = '$'
 CONFIRMATIONS_COOKIE_NAME = 'saved_confirmations'

@@ -1,0 +1,1 @@
+alter table ipsecurity_loggedaction rename to security_loggedaction

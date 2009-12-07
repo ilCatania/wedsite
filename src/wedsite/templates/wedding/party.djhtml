@@ -21,7 +21,7 @@
 			<li>
 				<label for="id_adults" >{% trans "Number of adults" %}:</label>
 				<input type="text" id="id_adults" name="adults" size="3"{% if errors.adults %} class="error"{% endif %}
-					title="{% trans 'Write the number of adults (older than 12) that will be attending here.' %}"
+					title='{% trans "Write the number of adults (older than 12) that will be attending here." %}'
 					{% if prepopulated_data.adults %}value="{{prepopulated_data.adults}}"{% endif %}/>
 			</li>
 			<li>
@@ -29,7 +29,7 @@
 					(<a href="javascript:void(0)">{% trans "Hide" %}</a>):
 				</label>
 				<input type="text" id="id_children" name="children" size="3"{% if errors.children %} class="error"{% endif %}
-					title="{% trans 'Write the number of children (aged 12 or less) that will be attending here.' %}"
+					title='{% trans "Write the number of children (aged 12 or less) that will be attending here." %}'
 					{% if prepopulated_data.children %}value="{{prepopulated_data.children}}"{% endif %}/>
 			</li>
 		</ul>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-29 23:31+0100\n"
+"POT-Creation-Date: 2009-12-06 15:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "Impossibile cancellare: %s"
 msgid "Confirmation deleted successfully!"
 msgstr "Conferma cancellata con successo!"
 
-#: .\news\urls.py:12 .\templates\home\home.djhtml.py:12
+#: .\news\urls.py:11 .\templates\home\home.djhtml.py:12
 msgid "Latest news"
 msgstr "Ultime news"
 
@@ -114,11 +114,11 @@ msgstr "Errore interno del server"
 msgid "500_body"
 msgstr "Ci dispiace, ma qualcosa è andato veramente storto."
 
-#: .\templates\base.djhtml.py:38
+#: .\templates\base.djhtml.py:40
 #, python-format
 msgid "footer with %(mail)s"
 msgstr ""
-" I contenuti di questa pagina potrebbero essere protetti da copyright. Per "
+"I contenuti di questa pagina potrebbero essere protetti da copyright. Per "
 "qualsiasi necessità puoi <a href=\"mailto:%(mail)s\">contattare</a> il "
 "webmaster."
 
@@ -190,17 +190,18 @@ msgstr ""
 msgid "Subscribe to RSS"
 msgstr "Sottoscrivi RSS"
 
-#: .\templates\home\home.djhtml.py:22 .\templates\news\detail.djhtml.py:9
-#: .\templates\news\list.djhtml.py:10
+#: .\templates\home\home.djhtml.py:22 .\templates\news\all.djhtml.py:10
+#: .\templates\news\detail.djhtml.py:9 .\templates\news\list.djhtml.py:10
 msgid "posted by"
 msgstr "scritto da"
 
-#: .\templates\home\home.djhtml.py:24 .\templates\news\detail.djhtml.py:10
-#: .\templates\news\list.djhtml.py:11
+#: .\templates\home\home.djhtml.py:24 .\templates\news\all.djhtml.py:11
+#: .\templates\news\detail.djhtml.py:10 .\templates\news\list.djhtml.py:11
 msgid "on"
 msgstr "il"
 
-#: .\templates\home\home.djhtml.py:34 .\templates\news\list.djhtml.py:20
+#: .\templates\home\home.djhtml.py:34 .\templates\news\all.djhtml.py:20
+#: .\templates\news\list.djhtml.py:20
 msgid "Read more"
 msgstr "Continua a leggere"
 
@@ -215,6 +216,26 @@ msgstr "Vedi i risultati"
 #: .\templates\i18n\setlang.djhtml.py:13
 msgid "Proceed with current language"
 msgstr "Prosegui con la lingua corrente"
+
+#: .\templates\news\all.djhtml.py:28
+msgid "First page"
+msgstr "Prima pagina"
+
+#: .\templates\news\all.djhtml.py:29
+msgid "Previous page"
+msgstr "Pagina precedente"
+
+#: .\templates\news\all.djhtml.py:31
+msgid "page"
+msgstr "pagina"
+
+#: .\templates\news\all.djhtml.py:33
+msgid "Next page"
+msgstr "Pagina successiva"
+
+#: .\templates\news\all.djhtml.py:34
+msgid "Last page"
+msgstr "Ultima pagina"
 
 #: .\templates\news\detail.djhtml.py:19
 msgid "Back to latest news"
@@ -262,7 +283,123 @@ msgstr "Gabriele ha votato questo"
 msgid "Poll"
 msgstr "Sondaggio"
 
-#: .\templates\wedding\gifts.djhtml.py:4 .\templates\wedding\party.djhtml.py:4
+#: .\templates\wedding\gifts.djhtml.py:4
+msgid "gifts_intro_p1"
+msgstr ""
+"Espressioni come \"coronare il proprio sogno d'amore\" o \"giurarsi amore "
+"eterno\" hanno indubbiamente una suggestività e musicalità loro propria. "
+"Tuttavia, sposarsi e andare a vivere insieme ha, cosa che sarà certamente "
+"già nota a molti lettori di questo sito ma che per noi si è concretizzata "
+"solo negli ultimi quattro mesi, una inevitabile componente logistica fatta "
+"di pentole antiaderenti, orrendi centrotavola di gusto coloniale, televisori "
+"a LED e cose simili."
+
+#: .\templates\wedding\gifts.djhtml.py:5
+msgid "gifts_intro_p2"
+msgstr ""
+"Molti nostri parenti, amici e conoscenti, ricevendo la partecipazione, hanno "
+"espresso il desiderio di contribuire allo sforzo economico delle nostre "
+"famiglie, desiderio lodevole della cui manifestazione siamo indubbiamente "
+"grati e che abbiamo intenzione, a onor del vero anche nel nostro interesse, "
+"di assecondare per quanto possibile. Entra quindi in scena la presente "
+"pagina web, dove organizzate in una comoda lista prioritizzata potrete "
+"trovare tutte le modalità con cui poter sostenere la nascita della nostra "
+"nuova famiglia nei suoi aspetti più concreti e contingenti."
+
+#: .\templates\wedding\gifts.djhtml.py:9
+#, python-format
+msgid "gifts_li_celebration with %(url_celebr)s"
+msgstr ""
+"<p>Il modo più bello, e forse anche il più economico, per aiutarci è "
+"partecipare alla <a href='%(url_celebr)s'>cerimonia</a>. Senza l'aiuto e "
+"l'amicizia di molti di voi probabilmente neanche ci saremmo conosciuti, "
+"sicuramente non avremmo mai deciso di sposarci: vi chiediamo quindi di "
+"continuare ad aiutarci partecipando al sacramento. <strong>Nota bene</"
+"strong>: questa modalità non è esclusiva e può essere adottata, a vostra "
+"discrezione, congiuntamente a una o più tra le successive.</p>"
+
+#: .\templates\wedding\gifts.djhtml.py:11
+#, python-format
+msgid "gifts_honeymoon_start with %(url_honeymoon)s"
+msgstr ""
+"Un modo quasi sicuro per guadagnarvi una cartolina dalla Polinesia è "
+"sostenere economicamente il nostro <a href='%(url_honeymoon)s'>viaggio di "
+"nozze</a>. La partecipazione è semplicissima e può avvenire alternativamente "
+"secondo due modalità. La prima è effettuare un bonifico bancario "
+"direttamente all'agenzia di viaggi, avendo cura  di indicare la causale del "
+"bonifico. Di seguito le coordinate bancarie:"
+
+#: .\templates\wedding\gifts.djhtml.py:13
+msgid "Reason for payment"
+msgstr "Causale"
+
+#: .\templates\wedding\gifts.djhtml.py:15
+msgid "Recipient"
+msgstr "Beneficiario"
+
+#: .\templates\wedding\gifts.djhtml.py:17
+msgid "Bank subsidiary"
+msgstr "Filiale"
+
+#: .\templates\wedding\gifts.djhtml.py:19
+msgid "IBAN code"
+msgstr "Codice IBAN"
+
+#: .\templates\wedding\gifts.djhtml.py:22
+#, python-format
+msgid "gifts_honeymoon_end with %(url_bluvac_age)s"
+msgstr ""
+"A seguito del bonifico, non resta che inviare via fax il numero di CRO (non "
+"appena la banca lo rende disponibile) all'agenzia di viaggi stessa, al "
+"numero di fax 02 32006419. La seconda possibilità, forse la più semplice, è "
+"il versamento in contanti direttamente presso una qualsiasi <a href='%"
+"(url_bluvac_age)s'>agenzia del gruppo Bluvacanze</a> (ce ne sono veramente "
+"dappertutto...)."
+
+#: .\templates\wedding\gifts.djhtml.py:25
+#, python-format
+msgid "gifts_weddinglist_start with %(url_kasan)s"
+msgstr ""
+"La più classica lista nozze è consigliata invece per chi, invitato a cena "
+"<em>chez nous</em>, desidera poter puntare il dito e dire \"Ah! Questo ve "
+"l'ho regalato io!\". Per poter soddisfare questo primordiale bisogno di "
+"identificazione, è sufficiente raggiungere il sito web di <a href='%"
+"(url_kasan)s'>Kasanova</a> ed immettere i seguenti dati nella form blu in "
+"alto a destra:"
+
+#: .\templates\wedding\gifts.djhtml.py:27
+msgid "Username"
+msgstr ""
+
+#: .\templates\wedding\gifts.djhtml.py:29
+msgid "Password"
+msgstr ""
+
+#: .\templates\wedding\gifts.djhtml.py:32
+#, python-format
+msgid "gifts_weddinglist_end with %(url_kasan_shops)s"
+msgstr ""
+"Per coloro, più concreti o forse semplicemente meno informatizzati, che "
+"desiderano vedere e toccare con mano, la soluzione migliore è invece recarsi "
+"presso uno dei molteplici <a href='%(url_kasan_shops)s'>negozi Kasanova</a> "
+"e richiedere la lista nozze aperta a nostro nome."
+
+#: .\templates\wedding\gifts.djhtml.py:34
+#, python-format
+msgid "gifts_li_other with %(mail_contact)s"
+msgstr ""
+"<p>L'ultima, più elaborata e costosa opzione riguarda l'acquisto (o la "
+"partecipazione al suddetto) degli elementi tecnologici che aiuteranno "
+"Cecilia nelle faccende di casa e sazieranno la fame digital-ricreativa di "
+"Gabriele (o, più probabilmente, viceversa). Questi oggetti non sono stati "
+"inclusi nelle opzioni precedenti anche perchè abbiamo deciso di "
+"procrastinarne l'acquisto sfruttando gli inevitabili cali di prezzo post-"
+"natalizi. Se desiderate partecipare all'acquisto di frigorifero, televisore, "
+"impianto Dolby Surround, micro-onde o simili, o se semplicemente avete un "
+"modello da consigliarci, potete <a href='%(mail_contact)s'>contattarci</a>.</"
+"p>"
+
+#: .\templates\wedding\party.djhtml.py:4
 msgid "Moroni Mansion"
 msgstr "Villa Moroni"
 
@@ -383,16 +520,13 @@ msgstr ""
 "Moroni (Sì, ne hanno uno)"
 
 #: .\templates\wedding\wedding.djhtml.py:3
-#, fuzzy
 msgid "Wedding"
-msgstr "nozze"
+msgstr "Nozze"
 
 #: .\templates\wedding\wedding.djhtml.py:3
-#, fuzzy
 msgid "Cecilia &amp; Gabriele"
-msgstr "Cecilia &amp; Gabriele si sposano!"
+msgstr "Cecilia &amp; Gabriele"
 
 #: .\templates\wedding\wedding.djhtml.py:4
-#, fuzzy
 msgid "The wedding"
-msgstr "nozze"
+msgstr "Le nozze"

@@ -1,12 +1,36 @@
-{% extends 'section_home.djhtml' %}
+{% extends 'with_sidebar.djhtml' %}
 {% load i18n %}
-{% block section_intro %}
-	<div class="pic left"><img src="/img/villa-moroni.jpg" alt='{% trans "Moroni Mansion" %}'/></div>
-	<p>
-			GIFTS: TODO
-	</p>
-{% endblock %}
-{% block left%}
-<h3>title</h3>
-<div>text</div>
-{% endblock %}
+{% block content %}<div class='c7 l1 r1'>
+	<p>{% blocktrans %}gifts_intro_p1{% endblocktrans %}</p>
+	<p>{% blocktrans %}gifts_intro_p2{% endblocktrans %}</p>
+</div>
+<div class='c5 l2 r2'>
+	<ol class="numbers">
+		<li>{% blocktrans with "/wedding/celebration/" as url_celebr %}gifts_li_celebration with {{url_celebr}}{% endblocktrans %}</li>
+		<li>
+			<p>{% blocktrans with "/wedding/honeymoon/" as url_honeymoon %}gifts_honeymoon_start with {{url_honeymoon}}{% endblocktrans %}</p>
+			<dl class='c3 l1 r1'>
+				<dt>{% trans "Reason for payment" %}:</dt>
+				<dd>lista nozze Catania</dd>
+				<dt>{% trans "Recipient" %}:</dt>
+				<dd>Bluvacanze Milano c.so Lodi</dd>
+				<dt>{% trans "Bank subsidiary" %}:</dt>
+				<dd>Creditio artigiano, p.za San Fedele 4, Milano</dd>
+				<dt>{% trans "IBAN code" %}:</dt>
+				<dd>IT 06 S 03512 01601 000000011403</dd>
+			</dl>
+			<p>{% blocktrans with "http://www.bluvacanze.it/agenzie.asp" as url_bluvac_age %}gifts_honeymoon_end with {{url_bluvac_age}}{% endblocktrans %}</p>
+		</li>
+		<li>
+			<p>{% blocktrans with "http://www.kasanova.it/" as url_kasan %}gifts_weddinglist_start with {{url_kasan}}{% endblocktrans %}</p>
+			<dl class='c3 l1 r1'>
+				<dt>{% trans "Username" %}:</dt>
+				<dd>k018.29000016</dd>
+				<dt>{% trans "Password" %}:</dt>
+				<dd>gabriceci</dd>
+			</dl>
+			<p>{% blocktrans with "http://www.kasanova.it/negozi" as url_kasan_shops %}gifts_weddinglist_end with {{url_kasan_shops}}{% endblocktrans %}</p>
+		</li>
+		<li>{% blocktrans with "mailto:gifts@ceciliaegabriele.heliohost.org" as mail_contact %}gifts_li_other with {{mail_contact}}{% endblocktrans %}</li>
+	</ol>
+</div>{% endblock %}

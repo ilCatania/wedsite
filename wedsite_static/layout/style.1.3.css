@@ -1,3 +1,22 @@
+dl {
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+dt {
+	font-weight: bold;
+	float: left;
+	padding-left: 4%;	
+}
+
+dd {
+	text-align: right;
+}
+
+#content .c5 .c3 dd {
+	margin-right: 4%;
+	padding-left: 37.333%;
+}
+
 p.actions {
 	text-align: right;
 }
@@ -56,7 +75,7 @@ p.info {
 }
 
 #countdown #hide_countdown, #show_countdown {
-	font-weight: bold;
+	/* font-weight: bold;*/
 }
 
 div.center {
@@ -354,6 +373,9 @@ input.error {
 /* news */
 .author {
 	text-transform: capitalize;	
+}
+.paginate {
+	text-align: center;
 }
 
 /* footer */

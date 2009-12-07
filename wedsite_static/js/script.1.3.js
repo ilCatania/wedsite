@@ -192,13 +192,12 @@ $.fn.marriageCountdown = function() {
 	};
 
 	var setCountdownContent = function(jq, text, options) {
-		var $span = jq.html('<p>'+text+'</p>' +
-				'<p>(<a href="javascript:void(0)" id="hide_countdown">' +
-				gettext('hide_countdown') + '</a>)</p>'
+		var $span = jq.html('<div>(<a href="javascript:void(0)" id="hide_countdown">' +
+				gettext('hide_countdown') + '</a>)</div><p>'+text+'</p>'
 				).find('span');
 		$('#hide_countdown').click(function(){
-			jq.empty().html('<p>(<a href="javascript:void(0)" id="show_countdown">' +
-					gettext('show_countdown') + '</a>)</p>');
+			jq.empty().html('<div>(<a href="javascript:void(0)" id="show_countdown">' +
+					gettext('show_countdown') + '</a>)</div>');
 			$('#show_countdown').click(function(){
 				jq.marriageCountdown();
 			});
