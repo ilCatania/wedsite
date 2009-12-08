@@ -256,4 +256,18 @@ $(document).ready(function() {
 	$('#confirmations .actions a.delete').setupDeleteConfirmationLink();
 	$('#ajax_poll').setupAjaxPollContent();
 	$('#countdown').marriageCountdown();
+	$('a.lb').lightBox({
+		imageLoading: '/img/lb/loading.gif',
+		imageBtnClose: '/img/lb/close.gif',
+		imageBtnPrev: '/img/lb/prev.gif',
+		imageBtnNext: '/img/lb/next.gif'
+		
+	});
+			/*{
+		//overlayBgColor: '#FFF',
+		//overlayOpacity: 0.6,
+		//containerResizeSpeed: 350,
+		//txtImage: gettext('Image'),
+		//txtOf: gettext('of')
+		}*/
 });

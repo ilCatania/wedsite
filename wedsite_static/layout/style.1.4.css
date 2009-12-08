@@ -47,17 +47,17 @@ p.info {
 #countdown {
 	color: #A28138;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 20px;
 	text-align: center;
 }
 
 #countdown table {
 	width: 97%;
-	margin: 10px 1.5%;
+	margin: 5px 1.5%;
 }
 
 #countdown td {
-	padding: 5px 0;	
+	padding: 2.5px 0;	
 }
 
 #countdown .col1 {
@@ -108,30 +108,6 @@ div.center p, div.center h2 {
 	text-align: center;	
 }
 
-/*
-#content > .single, #content > ul {
-	width: 77.777%;
-	margin: 20px 11.111%;
-}
-
-#content > .single p, #content > ul h3 {
-	width: 96.5714%;
-	margin: 0 1.71428%;	
-}
-*/
-/* todo: same as ajax_poll */
-/*#content .single .info, #content .single .text, #content > ul p
-{
-	width: 71.4285%;
-	margin: 0 14.2857%;
-	padding-bottom: 1em;
-}
-*/
-/*
-#content > ul .actions {
-	font-size: 1.2em;	
-}
-*/
 .pic.left {
 	float: left;
 	overflow: hidden;
@@ -227,26 +203,6 @@ body.lang button.en div {
 body.lang button.it div {
 	background-position: -160px 0;
 }
-/* poll pages */
-/*
-.detail {
-	width: 77.777%;
-	margin: 20px 11.111%;
-}
-
-.detail .question {
-	font-size: 2em;
-	line-height: 1.2em;
-	width: 96.5714%;
-	margin: 0 1.71428%;	
-}
-
-#ajax_poll {
-	width: 71.4285%;
-	margin: 20px 14.2857%;
-	min-height: 300px;	
-}
-*/
 
 #ajax_poll p {
 	text-align: center;

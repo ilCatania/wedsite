@@ -201,6 +201,11 @@ ol.numbers {
 	list-style-position: outside;	
 }
 
+ul.bullets {
+	list-style-type: disc;
+	list-style-position: outside;	
+}
+
 /*
 #content h1, #content h2, #content h3 {
 	color: #006;
@@ -252,6 +257,12 @@ ol.numbers {
 	/*width: 88%;*/
 	margin-left: 6%;
 	margin-right: 6%;
+}
+
+#content .c3 p, #content .c3 h3 {
+	/*width: 81%;*/
+	margin-left: 4.5%;
+	margin-right: 4.5%;
 }
 
 #content .c4 p, #content .c4 h3 {
