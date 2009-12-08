@@ -1,0 +1,16 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n %}
+{% block meta_title %}{% trans "The honeymoon trip" %} - {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
+{% block title %}{% trans "The honeymoon trip" %}{% endblock %}
+{% block content %}<div class='c5 l2 r2'>
+	<p>{% blocktrans %}honeymoon_p1{% endblocktrans %}</p>
+</div>
+<div class='l1 r1 c7 center pic border'>
+	<a class='lb' href='/img/polinesia.jpg' title='{% trans "Polynesia" %}!'>
+		<img src='/img/t-polinesia.jpg' alt='{% trans "Polynesia" %}!'/>
+	</a>
+</div>
+<div class='c5 l2 r2'>
+	<p>{% blocktrans %}honeymoon_p2{% endblocktrans %}</p>
+</div>
+{% endblock %}

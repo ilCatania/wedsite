@@ -79,5 +79,12 @@ msgstr "seconds"
 msgid "ss1"
 msgstr "second"
 
+msgid "of"
+msgstr "of"
+
+msgid "Image"
+msgstr "Image"
+
+
 
 

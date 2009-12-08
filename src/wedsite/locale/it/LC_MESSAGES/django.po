@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-06 15:57+0100\n"
+"POT-Creation-Date: 2009-12-08 15:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr "English"
 msgid "Name"
 msgstr "Nome"
 
-#: .\confirm\models.py:7 .\templates\wedding\party.djhtml.py:16
+#: .\confirm\models.py:7 .\templates\wedding\party.djhtml.py:18
 msgid "Full name"
 msgstr "Nome"
 
@@ -283,6 +283,54 @@ msgstr "Gabriele ha votato questo"
 msgid "Poll"
 msgstr "Sondaggio"
 
+#: .\templates\wedding\celebration.djhtml.py:3
+#: .\templates\wedding\celebration.djhtml.py:4
+msgid "The wedding celebration"
+msgstr "Celebrazione del Sacramento"
+
+#: .\templates\wedding\celebration.djhtml.py:3
+#: .\templates\wedding\honeymoon.djhtml.py:3
+#: .\templates\wedding\party.djhtml.py:3
+#: .\templates\wedding\wedding.djhtml.py:3
+msgid "Cecilia &amp; Gabriele"
+msgstr "Cecilia &amp; Gabriele"
+
+#: .\templates\wedding\celebration.djhtml.py:6
+msgid "celebration_intro_p1"
+msgstr ""
+"Celebreremo il rito del matrimonio, presieduto da don Giuseppe Vergani, alle "
+"ore 11:00 presso la chiesa di San Michele Arcangelo, a Bellinzago Lombardo. "
+"Siete tutti invitati!"
+
+#: .\templates\wedding\celebration.djhtml.py:7
+#, python-format
+msgid "celebration_intro_p2 with %(mail_choir)s"
+msgstr ""
+"Se sai cantare e te la senti di aiutarci partecipando attivamente al coro "
+"durante la cerimonia, per favore <a href='%(mail_choir)s'>faccelo sapere</a>."
+
+#: .\templates\wedding\celebration.djhtml.py:8
+msgid "Useful information"
+msgstr "Informazioni utili"
+
+#: .\templates\wedding\celebration.djhtml.py:11
+#, python-format
+msgid "gmaps_to_church with %(url_gmaps_church)s"
+msgstr ""
+"<a href='%(url_gmaps_church)s'>Indicazioni stradali</a> dalla tangenziale "
+"Est di Milano alla chiesa di San Michele, secondo Google Maps"
+
+#: .\templates\wedding\celebration.djhtml.py:14
+msgid "church_parking_directions"
+msgstr ""
+"Nel prossimo futuro aggiungeremo qui qualche suggerimento su dove "
+"parcheggiare la vostra macchina vicino alla chiesa"
+
+#: .\templates\wedding\celebration.djhtml.py:18
+#: .\templates\wedding\honeymoon.djhtml.py:11
+msgid "Church of St. Michael the Archangel"
+msgstr "Chiesa di San Michele Arcangelo"
+
 #: .\templates\wedding\gifts.djhtml.py:4
 msgid "gifts_intro_p1"
 msgstr ""
@@ -399,120 +447,146 @@ msgstr ""
 "modello da consigliarci, potete <a href='%(mail_contact)s'>contattarci</a>.</"
 "p>"
 
-#: .\templates\wedding\party.djhtml.py:4
+#: .\templates\wedding\honeymoon.djhtml.py:3
+#: .\templates\wedding\honeymoon.djhtml.py:4
+msgid "The honeymoon trip"
+msgstr "Il viaggio di nozze"
+
+#: .\templates\wedding\honeymoon.djhtml.py:6
+msgid "honeymoon_p1"
+msgstr ""
+"Per il nostro viaggio di nozze abbiamo deciso di strafare: andremo in Polinesia! "
+"Faremo tappa a San Francisco per visitare un po' di USA, dopodichè ci godremo un "
+"meritato riposo marittimo a Bora Bora e Papeete. Di seguito trovate una foto "
+"per rendere un po' l'idea (un clic per ingrandire!)."
+
+msgid "honeymoon_p2"
+msgstr "Se volete ricevere una cartolina, o se semplicemente volete contribuire "
+"a questa importante fase del nostro matrimonio (la prima vera vacanza insieme!), trovate tutte le informazioni necessarie "
+"nella pagia \"Regali\". Grazie!"
+
+#: .\templates\wedding\honeymoon.djhtml.py:8
+msgid "Polynesia"
+msgstr "Polinesia"
+
+#: .\templates\wedding\party.djhtml.py:3 .\templates\wedding\party.djhtml.py:4
+msgid "The party"
+msgstr "Il ricevimento"
+
+#: .\templates\wedding\party.djhtml.py:6
 msgid "Moroni Mansion"
 msgstr "Villa Moroni"
 
-#: .\templates\wedding\party.djhtml.py:5
+#: .\templates\wedding\party.djhtml.py:7
 msgid "party_intro_p1"
 msgstr ""
 "Dopo la cerimonia, ci trasferiremo a <strong>Villa Moroni</strong> per il "
 "ricevimento di nozze. In questa pagina speriamo di aver messo tutte le "
 "informazioni che possono servire a chi vorrà unirsi a noi."
 
-#: .\templates\wedding\party.djhtml.py:8
+#: .\templates\wedding\party.djhtml.py:10
 msgid "confirm_form_title"
 msgstr "Conferma la tua presenza"
 
-#: .\templates\wedding\party.djhtml.py:10
+#: .\templates\wedding\party.djhtml.py:12
 msgid "confirm_form_legend"
 msgstr ""
 "Se verrai a festeggiare con noi e vuoi essere sicuro che ti lasceremo "
 "qualcosa da mangiare, riempi questa form."
 
-#: .\templates\wedding\party.djhtml.py:12
+#: .\templates\wedding\party.djhtml.py:14
 msgid "confirm_form_error"
 msgstr "I campi evidenziati mancano o non sono validi."
 
-#: .\templates\wedding\party.djhtml.py:18
+#: .\templates\wedding\party.djhtml.py:20
 msgid "Write your full name here (e.g. Brambilla Family)."
 msgstr "Indica qui il tuo nome completo (es. Famiglia Brambilla)"
 
-#: .\templates\wedding\party.djhtml.py:22
+#: .\templates\wedding\party.djhtml.py:24
 msgid "Number of adults"
 msgstr "Numero adulti"
 
-#: .\templates\wedding\party.djhtml.py:24
+#: .\templates\wedding\party.djhtml.py:26
 msgid "Write the number of adults (older than 12) that will be attending here."
 msgstr ""
 "Indica qui il numero di adulti (maggiori di 12 anni) che saranno presenti."
 
-#: .\templates\wedding\party.djhtml.py:28
+#: .\templates\wedding\party.djhtml.py:30
 msgid "Number of children"
 msgstr "Num. bambini"
 
-#: .\templates\wedding\party.djhtml.py:29
+#: .\templates\wedding\party.djhtml.py:31
 msgid "Hide"
 msgstr "Nascondi"
 
-#: .\templates\wedding\party.djhtml.py:32
+#: .\templates\wedding\party.djhtml.py:34
 msgid ""
 "Write the number of children (aged 12 or less) that will be attending here."
 msgstr ""
 "Indica qui il numero di bambini (di 12 anni o meno) che saranno presenti."
 
-#: .\templates\wedding\party.djhtml.py:36
+#: .\templates\wedding\party.djhtml.py:38
 msgid "Are you bringing children aged 12 or less?"
 msgstr "Porterai con te bambini di 12 anni o meno?"
 
-#: .\templates\wedding\party.djhtml.py:36
+#: .\templates\wedding\party.djhtml.py:38
 msgid "Click here to add them."
 msgstr "Clicca qui per aggiungerli."
 
-#: .\templates\wedding\party.djhtml.py:39
-#: .\templates\wedding\party.djhtml.py:40
+#: .\templates\wedding\party.djhtml.py:41
+#: .\templates\wedding\party.djhtml.py:42
 msgid "Confirm"
 msgstr "Conferma"
 
-#: .\templates\wedding\party.djhtml.py:42
+#: .\templates\wedding\party.djhtml.py:44
 msgid "confirm_list_legend"
 msgstr "Hai già confermato le seguenti presenze:"
 
-#: .\templates\wedding\party.djhtml.py:48
+#: .\templates\wedding\party.djhtml.py:50
 msgid "adults"
 msgstr "adulti"
 
-#: .\templates\wedding\party.djhtml.py:48
+#: .\templates\wedding\party.djhtml.py:50
 msgid "and"
 msgstr "e"
 
-#: .\templates\wedding\party.djhtml.py:48
+#: .\templates\wedding\party.djhtml.py:50
 msgid "children"
 msgstr "bambini"
 
-#: .\templates\wedding\party.djhtml.py:50
+#: .\templates\wedding\party.djhtml.py:52
 msgid "Edit"
 msgstr "Modifica"
 
-#: .\templates\wedding\party.djhtml.py:51
+#: .\templates\wedding\party.djhtml.py:53
 msgid "Delete"
 msgstr "Cancella"
 
-#: .\templates\wedding\party.djhtml.py:58
+#: .\templates\wedding\party.djhtml.py:60
 msgid "Add another"
 msgstr "Aggiungi un altro"
 
-#: .\templates\wedding\party.djhtml.py:62
+#: .\templates\wedding\party.djhtml.py:64
 msgid "max_confirm_message"
 msgstr "Hai raggiunto il massimo di 3 conferme."
 
-#: .\templates\wedding\party.djhtml.py:72
+#: .\templates\wedding\party.djhtml.py:74
 msgid "Useful links"
 msgstr "Link utili"
 
-#: .\templates\wedding\party.djhtml.py:74
+#: .\templates\wedding\party.djhtml.py:77
 #, python-format
 msgid "moroni_link with %(addr)s"
 msgstr "Il sito di <a href=\"%(addr)s\" target=\"_blank\">Villa Moroni</a>"
 
-#: .\templates\wedding\party.djhtml.py:77
+#: .\templates\wedding\party.djhtml.py:80
 #, python-format
 msgid "moroni_google_directions with %(addr1)s%(LANGUAGE_CODE)s%(addr2)s"
 msgstr ""
 "<a href=\"%(addr1)s%(LANGUAGE_CODE)s%(addr2)s\" target=\"_blank"
 "\">Indicazioni stradali</a> dalla chiesa alla villa, secondo Google Maps"
 
-#: .\templates\wedding\party.djhtml.py:80
+#: .\templates\wedding\party.djhtml.py:83
 #, python-format
 msgid "moroni_fb with %(addr)s"
 msgstr ""
@@ -520,13 +594,9 @@ msgstr ""
 "Moroni (Sì, ne hanno uno)"
 
 #: .\templates\wedding\wedding.djhtml.py:3
-msgid "Wedding"
-msgstr "Nozze"
-
-#: .\templates\wedding\wedding.djhtml.py:3
-msgid "Cecilia &amp; Gabriele"
-msgstr "Cecilia &amp; Gabriele"
-
 #: .\templates\wedding\wedding.djhtml.py:4
 msgid "The wedding"
 msgstr "Le nozze"
+
+#~ msgid "Wedding"
+#~ msgstr "Nozze"

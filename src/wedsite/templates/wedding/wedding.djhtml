@@ -1,6 +1,6 @@
 {% extends 'with_sidebar.djhtml' %}
 {% load i18n %}
-{% block meta_title %}{% trans "Wedding" %} | {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
+{% block meta_title %}{% trans "The wedding" %} - {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
 {% block title %}{% trans "The wedding" %}{% endblock %}
 {% block content %}
 <div class="c7 l1 r1">

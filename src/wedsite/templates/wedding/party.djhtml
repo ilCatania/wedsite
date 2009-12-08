@@ -1,5 +1,7 @@
 {% extends 'with_sidebar.djhtml' %}
 {% load i18n %}
+{% block meta_title %}{% trans "The party" %} - {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
+{% block title %}{% trans "The party" %}{% endblock %}
 {% block content %}<div class='c7 l1 r1'>
 	<div class="pic left"><img src="/img/villa-moroni.jpg" alt='{% trans "Moroni Mansion" %}'/></div>
 	<p>{% blocktrans %}party_intro_p1{% endblocktrans %}</p>
@@ -43,14 +45,16 @@
 	<ul id="confirmations">
 	{% for confirmation in confirmations %}
 		<li id="confirmation_{{confirmation.id}}">
-			<b>{{ confirmation.name }}</b> - 
-			<span class="body">
-				{{confirmation.adults }} {% trans "adults" %}{% if confirmation.children %} {% trans "and" %} {{confirmation.children }} {% trans "children" %}{% endif %}.
-				<span class="actions">
-					<a class="edit" href="javascript:void(0);">{% trans "Edit" %}</a> |
-					<a class="delete" href="javascript:void(0);">{% trans "Delete" %}</a>
+			<p>
+				<b>{{ confirmation.name }}</b> - 
+				<span class="body">
+					{{confirmation.adults }} {% trans "adults" %}{% if confirmation.children %} {% trans "and" %} {{confirmation.children }} {% trans "children" %}{% endif %}.
+					<span class="actions">
+						<a class="edit" href="javascript:void(0);">{% trans "Edit" %}</a> |
+						<a class="delete" href="javascript:void(0);">{% trans "Delete" %}</a>
+					</span>
 				</span>
-			</span>
+			</p>
 		</li>
 	{% endfor %}
 	</ul>
@@ -70,14 +74,16 @@
 </div>
 <div class='c2 r1'>
 	<h2>{% trans "Useful links" %}</h2>
-	<p>
-		{% blocktrans with "http://www.villamoroni.it/" as addr %}moroni_link with {{addr}}{% endblocktrans %}
-	</p>
-	<p>
-		{% blocktrans with "http://maps.google.it/maps?f=d&amp;source=s_d&amp;saddr=Piazza+della+Chiesa&amp;daddr=Piazza+della+Libert%C3%A0+28,+stezzano&amp;hl=" as addr1 and "&amp;geocode=FSPetgIdYiuQAA%3B&amp;mra=ls&amp;sll=45.539008,9.449143&amp;sspn=0.005531,0.009645&amp;ie=UTF8&amp;z=12" as addr2 %}moroni_google_directions with {{ addr1 }}{{ LANGUAGE_CODE }}{{ addr2 }}{% endblocktrans %}
-	</p>
-	<p>
-		{% blocktrans with "http://www.facebook.com/pages/Villa-Moroni/105719515991" as addr %}moroni_fb with {{addr}}{% endblocktrans %}
-	</p>
+	<ul>
+		<li>
+			<p>{% blocktrans with "http://www.villamoroni.it/" as addr %}moroni_link with {{addr}}{% endblocktrans %}</p>
+		</li>
+		<li>
+			<p>{% blocktrans with "http://maps.google.it/maps?f=d&amp;source=s_d&amp;saddr=Piazza+della+Chiesa&amp;daddr=Piazza+della+Libert%C3%A0+28,+stezzano&amp;hl=" as addr1 and "&amp;geocode=FSPetgIdYiuQAA%3B&amp;mra=ls&amp;sll=45.539008,9.449143&amp;sspn=0.005531,0.009645&amp;ie=UTF8&amp;z=12" as addr2 %}moroni_google_directions with {{ addr1 }}{{ LANGUAGE_CODE }}{{ addr2 }}{% endblocktrans %}</p>
+		</li>
+		<li>
+			<p>{% blocktrans with "http://www.facebook.com/pages/Villa-Moroni/105719515991" as addr %}moroni_fb with {{addr}}{% endblocktrans %}</p>
+		</li>
+	</ul>
 </div>
 {% endblock %}

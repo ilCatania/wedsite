@@ -1,0 +1,19 @@
+{% extends 'with_sidebar.djhtml' %}
+{% load i18n %}
+{% block meta_title %}{% trans "The wedding celebration" %} - {% trans "Cecilia &amp; Gabriele" %}{% endblock %}
+{% block title %}{% trans "The wedding celebration" %}{% endblock %}
+{% block content %}<div class='c3 l2 r1'>
+	<p>{% blocktrans %}celebration_intro_p1{% endblocktrans %}</p>
+	<p>{% blocktrans with "mailto:choir@ceciliaegabriele.heliohost.org" as mail_choir%}celebration_intro_p2 with {{mail_choir}}{% endblocktrans %}</p>
+	<h2>{% trans "Useful information" %}</h2>
+	<ul class='bullets'>
+		<li>
+			<p>{% blocktrans with "http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=45.486974,9.250274&amp;daddr=Via+Volta,+20060+Bellinzago+Lombardo+Milano,+Lombardia,+Italy&amp;geocode=%3BFQbdtgIddS2QACnLag7cDrWGRzEmpt4bNHx5Nw&amp;mra=dme&amp;mrcr=0&amp;mrsp=0&amp;sz=15&amp;dirflg=ht&amp;sll=45.485861,9.262161&amp;sspn=0.022144,0.038581&amp;ie=UTF8&amp;z=15" as url_gmaps_church %}gmaps_to_church with {{url_gmaps_church}}{% endblocktrans %}</p>
+		</li>
+		<li>
+			<p>{% blocktrans  %}church_parking_directions{% endblocktrans %}</p>
+		</li>
+	</ul>
+</div>
+<div class="c2 r1 center"><img src="/img/facciata-chiesa.jpg" alt='{% trans "Church of St. Michael the Archangel" %}'/></div>
+{% endblock %}

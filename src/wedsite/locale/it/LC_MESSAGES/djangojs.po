@@ -78,3 +78,9 @@ msgstr "secondi"
 
 msgid "ss1"
 msgstr "secondo"
+
+msgid "of"
+msgstr "di"
+
+msgid "Image"
+msgstr "Immagine"
