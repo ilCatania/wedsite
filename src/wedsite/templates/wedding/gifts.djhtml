@@ -1,13 +1,21 @@
 {% extends 'with_sidebar.djhtml' %}
 {% load i18n %}
 {% block content %}<div class='c7 l1 r1'>
+	<div class="pic right">
+		<img src="/img/coltelli.jpg" alt='{% trans "Some very sharp knifes" %}'
+			title='{% trans "knifes_title" %}'/>
+	</div>
 	<p>{% blocktrans %}gifts_intro_p1{% endblocktrans %}</p>
 	<p>{% blocktrans %}gifts_intro_p2{% endblocktrans %}</p>
 </div>
 <div class='c5 l2 r2'>
-	<ol class="numbers">
-		<li>{% blocktrans with "/wedding/celebration/" as url_celebr %}gifts_li_celebration with {{url_celebr}}{% endblocktrans %}</li>
+	<ol class='numbers toggle'>
 		<li>
+			<p class='tag'><strong>{%trans "The ceremony" %}</strong></p>
+			<p>{% blocktrans with "/wedding/celebration/" as url_celebr %}gifts_li_celebration_p with {{url_celebr}}{% endblocktrans %}</p>
+		</li>
+		<li>
+			<p class='tag'><strong>{%trans "The honeymoon" %}</strong></p>
 			<p>{% blocktrans with "/wedding/honeymoon/" as url_honeymoon %}gifts_honeymoon_start with {{url_honeymoon}}{% endblocktrans %}</p>
 			<dl class='c3 l1 r1'>
 				<dt>{% trans "Reason for payment" %}:</dt>
@@ -22,6 +30,7 @@
 			<p>{% blocktrans with "http://www.bluvacanze.it/agenzie.asp" as url_bluvac_age %}gifts_honeymoon_end with {{url_bluvac_age}}{% endblocktrans %}</p>
 		</li>
 		<li>
+			<p class='tag'><strong>{%trans "The wedding list" %}</strong></p>
 			<p>{% blocktrans with "http://www.kasanova.it/" as url_kasan %}gifts_weddinglist_start with {{url_kasan}}{% endblocktrans %}</p>
 			<dl class='c3 l1 r1'>
 				<dt>{% trans "Username" %}:</dt>
@@ -31,6 +40,9 @@
 			</dl>
 			<p>{% blocktrans with "http://www.kasanova.it/negozi" as url_kasan_shops %}gifts_weddinglist_end with {{url_kasan_shops}}{% endblocktrans %}</p>
 		</li>
-		<li>{% blocktrans with "mailto:gifts@ceciliaegabriele.heliohost.org" as mail_contact %}gifts_li_other with {{mail_contact}}{% endblocktrans %}</li>
+		<li>
+			<p class='tag'><strong>{%trans "The big stuff" %}</strong></p>
+			<p>{% blocktrans with "mailto:gifts@ceciliaegabriele.heliohost.org" as mail_contact %}gifts_li_other_p with {{mail_contact}}{% endblocktrans %}</p>
+		</li>
 	</ol>
 </div>{% endblock %}

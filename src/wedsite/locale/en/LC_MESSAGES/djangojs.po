@@ -85,6 +85,8 @@ msgstr "of"
 msgid "Image"
 msgstr "Image"
 
+msgid "show_details"
+msgstr "Show details"
 
-
-
+msgid "hide_details"
+msgstr "Hide details"

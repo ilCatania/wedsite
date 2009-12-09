@@ -1,7 +1,7 @@
 var _blue = '#000066';
 var _yellow = '#FFCC33';
-
 var delta = 500;
+jQuery.easing.def = 'easeOutQuad';
 
 var err = function() {
 	alert("No response from server! Page will be reloaded.");
@@ -247,6 +247,47 @@ $.fn.marriageCountdown = function() {
 	}
 };
 
+$.fn.setupListToggle = function() {
+	var text_hide = gettext('hide_details');
+	var text_show = gettext('show_details');
+	return this.each(function() {
+		var $li = $(this).children('li');
+		$li
+			.children('.tag')
+			.append(" - <a href='javascript:void(0);' class='toggle hide'>" + text_show + "</a>")
+			.children('a.toggle');
+		$li.children(':not(.tag)').hide();
+		$li.each(function() {
+			var $this = $(this);
+			var $thisToggle = $this.children('.tag').children('a.toggle');
+			var $thisNonTags = $this.children(':not(.tag)');
+			var $otherLis = $this.siblings('li');
+			var $otherToggles = $otherLis.children('.tag').children('a.toggle');
+			var $otherNonTags = $otherLis.children(':not(.tag)');
+			
+			var showDesc = function() {
+				$otherNonTags.slideUp(delta, function() {
+					$otherToggles.addClass('hide').text(text_show);
+					$thisNonTags.slideDown(delta, function(){
+						$thisToggle.removeClass('hide').text(text_hide);
+					});
+				});
+			};
+			
+			var hideDesc = function() {
+				$thisNonTags.slideUp(delta, function(){
+					$thisToggle.addClass('hide').text(text_show);
+				});
+			};
+			
+			$thisToggle.click(function(){
+				if($thisToggle.hasClass('hide'))  showDesc();
+				else hideDesc();
+			});
+		});
+	});
+};
+
 $(document).ready(function() {
 	$('#mainnav li:not(.selected)').mainNavFade();
 	$('#subnav li:not(.selected) a').subNavHover();
@@ -256,6 +297,7 @@ $(document).ready(function() {
 	$('#confirmations .actions a.delete').setupDeleteConfirmationLink();
 	$('#ajax_poll').setupAjaxPollContent();
 	$('#countdown').marriageCountdown();
+	$('ol.toggle, ul.toggle').setupListToggle();
 	$('a.lb').lightBox({
 		imageLoading: '/img/lb/loading.gif',
 		imageBtnClose: '/img/lb/close.gif',
@@ -263,11 +305,4 @@ $(document).ready(function() {
 		imageBtnNext: '/img/lb/next.gif'
 		
 	});
-			/*{
-		//overlayBgColor: '#FFF',
-		//overlayOpacity: 0.6,
-		//containerResizeSpeed: 350,
-		//txtImage: gettext('Image'),
-		//txtOf: gettext('of')
-		}*/
 });

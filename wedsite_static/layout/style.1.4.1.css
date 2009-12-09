@@ -108,13 +108,20 @@ div.center p, div.center h2 {
 	text-align: center;	
 }
 
-.pic.left {
-	float: left;
+.pic.left, .pic.right {
 	overflow: hidden;
 	position: relative;
 }
 
-.c7 .pic.left {
+.pic.left {
+	float: left;
+}
+
+.pic.right {
+	float: right;
+}
+
+.c7 .pic.left, .c7 .pic.right {
 	width: 39.4285%;
 	height: 150px;
 	margin: 10px 3.42856% 10px 1.71428%;

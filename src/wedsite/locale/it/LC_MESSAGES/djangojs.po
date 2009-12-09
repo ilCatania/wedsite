@@ -84,3 +84,9 @@ msgstr "di"
 
 msgid "Image"
 msgstr "Immagine"
+
+msgid "show_details"
+msgstr "Mostra dettagli"
+
+msgid "hide_details"
+msgstr "Nascondi dettagli"

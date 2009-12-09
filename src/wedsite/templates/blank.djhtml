@@ -10,15 +10,16 @@
 	<link rel="shortcut icon" href="/img/favicon.ico" />
 
 	<link rel="stylesheet" href="/layout/base.1.4.css" type="text/css" media="screen"/>
-	<link rel="stylesheet" href="/layout/style.1.4.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="/layout/style.1.4.1.css" type="text/css" media="screen"/>
 	<link rel="stylesheet" href="/layout/jquery.lightbox-0.5.css" type="text/css" media="screen"/>
 	
 	<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
 	<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.countdown.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.lightbox-0.5.pack.js"></script>
+	<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="/js/jquery.form.js"></script>
-	<script type="text/javascript" src="/js/script.1.4.js"></script>
+	<script type="text/javascript" src="/js/script.1.4.1.js"></script>
 	{% block head %}{% endblock %}
 	<title>{% block meta_title %}{% if title %}{{ title }}{% else %}Cecilia &amp; Gabriele: the wedsite{% endif %}{% endblock %}</title>
 </head>
