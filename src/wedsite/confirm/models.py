@@ -10,7 +10,7 @@ class PartyConfirmation(models.Model):
     def __unicode__(self):
         return self.name
     class Meta:
-        ordering = ('name',)
+        ordering = ('-date_confirmed',)
     def save(self):
         self.hash_code = hash((self.name, self.adults, self.date_confirmed))
         super(PartyConfirmation, self).save()

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-09 22:41+0100\n"
+"POT-Creation-Date: 2009-12-12 20:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Enable javascript to see the countdown"
 msgstr "Enable javascript to see the countdown"
 
-#: .\templates\home\home.djhtml.py:3
+#: .\templates\home\home.djhtml.py:3 .\templates\us\betrothed.djhtml.py:3
 msgid "Welcome"
 msgstr "Welcome"
 
@@ -336,7 +336,9 @@ msgstr "Some very sharp knifes"
 
 #: .\templates\wedding\gifts.djhtml.py:6
 msgid "knifes_title"
-msgstr "With those things at hand, cross your fingers and hope we don&apos; argue anytime soon..."
+msgstr ""
+"With those things at hand, cross your fingers and hope we don&apos; argue "
+"anytime soon..."
 
 #: .\templates\wedding\gifts.djhtml.py:8
 msgid "gifts_intro_p1"
@@ -410,10 +412,13 @@ msgstr "IBAN code"
 msgid "gifts_honeymoon_end with %(url_bluvac_age)s"
 msgstr ""
 "After having performed the transfer, all you need is to send the CRO number "
-"(as soon as the bank makes it available) to the travel agency, using the fax "
-"number (+39) 02 32006419. The second way, probably simpler, is heading to "
-"the closest <a href='%(url_bluvac_age)s'>Bluvacanze agency</a> and pay by "
-"cash there."
+"(as soon as the bank makes it available) to the travel agency, via e-mail at "
+"the address <a href='mailto:milanocsolodi@bluvacanze.it?subject=Lista nozze "
+"Catania - Brambilla'>milanocsolodi@bluvacanze.it</a> or by fax using the "
+"number (+39) 02 32006419. Be sure to indicate your name in the e-mail or "
+"fax, so that we may thank you afterwards! The second way, probably simpler, "
+"is heading to the closest <a href='%(url_bluvac_age)s'>Bluvacanze agency</a> "
+"and pay by cash there."
 
 #: .\templates\wedding\gifts.djhtml.py:33
 msgid "The wedding list"
