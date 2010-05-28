@@ -5,6 +5,7 @@ jQuery.easing.def = 'easeOutQuad';
 
 var err = function() {
 	alert("No response from server! Page will be reloaded.");
+	document.location = '.';
 };
 
 $.fn.mainNavFade = function() {
@@ -122,7 +123,6 @@ $.fn.setupDeleteConfirmationLink = function() {
 					}, 3000);
 				} else {
 					err();
-					location.href = '.';
 				}
 			}, 'json');
 		});
@@ -156,13 +156,11 @@ $.fn.setupAjaxPollForm = function() {
 		var $form = $(this);
 		$form.ajaxForm({
 			'target': '#ajax_poll',
-			'error': function(resp) { 
+			'error': function(resp) {
 				var text = resp.responseText.toString();
 				if(text.length < 50)
 					alert(text);
-				else {
-					; //TODO !
-				}
+				else err();
 			}
 		});
 	});
@@ -193,9 +191,10 @@ $.fn.marriageCountdown = function() {
 
 	var setCountdownContent = function(jq, text, options) {
 		jq.html('<div>(<a href="javascript:void(0)" id="hide_countdown">' +
-				gettext('hide_countdown') + '</a>)</div><p>'+text+'</p><table></table>');
+				gettext('hide_countdown') + '</a>)</div><p>'+text+'</p><table></table>')
+				.hide().fadeIn(delta);
 		$('#hide_countdown').click(function(){
-			jq.children().slideUp(delta, function() {
+			jq.children().fadeOut(delta, function() {
 				jq.empty().html('<div>(<a href="javascript:void(0)" id="show_countdown">' +
 						gettext('show_countdown') + '</a>)</div>');
 				$('#show_countdown').click(function(){
@@ -210,7 +209,7 @@ $.fn.marriageCountdown = function() {
 	};
 	
 	var beforeCeremony = function(jq) {
-		var text = gettext('getting_married_in') + ' <span></span>';
+		var text = gettext('getting_married_in');
 		var beforeOpts = $.extend({}, opts, {
 			'until': celebrationStart,
 			//timezone = +1,
@@ -233,7 +232,7 @@ $.fn.marriageCountdown = function() {
 	};
 	
 	var afterCeremony = function(jq) {
-		var text = gettext('been_married_for') + ' <span></span>';
+		var text = gettext('been_married_for');
 		var afterOpts = $.extend({}, opts, {
 			'since': celebrationEnd/*,
 			timezone = +1*/
@@ -241,12 +240,13 @@ $.fn.marriageCountdown = function() {
 		setCountdownContent(jq, text, afterOpts);
 	};
 	
+	var $this = $(this);
 	if(now < celebrationStart) {
-		beforeCeremony(this);
+		beforeCeremony($this);
 	} else if(now > celebrationEnd) {
-		afterCeremony(this);
+		afterCeremony($this);
 	} else {
-		duringCeremony(this);
+		duringCeremony($this);
 	}
 };
 
@@ -272,24 +272,54 @@ $.fn.setupListToggle = function() {
 				$otherNonTags.slideUp(delta, function() {
 					$otherToggles.addClass('hide').text(text_show);
 					$thisNonTags.slideDown(delta, function(){
-						$thisToggle.removeClass('hide').text(text_hide);
+						$thisToggle.text(text_hide);
 					});
 				});
 			};
 			
 			var hideDesc = function() {
 				$thisNonTags.slideUp(delta, function(){
-					$thisToggle.addClass('hide').text(text_show);
+					$thisToggle.text(text_show);
 				});
 			};
 			
 			$thisToggle.click(function(){
-				if($thisToggle.hasClass('hide'))  showDesc();
-				else hideDesc();
+				if($thisToggle.toggleClass('hide').hasClass('hide')) hideDesc();
+				else showDesc();
 			});
 		});
 	});
 };
+
+$.fn.setupExpandableBoxes = function() {
+	return this.each(function() {
+		var $this = $(this);
+		var $boxes = $this.children('div');
+		
+		$boxes.each(function() {
+			var $box = $(this);
+			var $expandToggle = $box.children('a.expand');
+			$expandToggle.click(function() {
+				if($expandToggle.toggleClass('open').hasClass('open')) {
+					$this.animate({'width': '480px'}, delta);
+					$box.animate({
+						'width': '240px',
+						'height': '460px',
+						'marginTop': '0'
+					}, delta);
+					//TODO: close others
+				} else {
+					$this.animate({'width': '400px'}, delta);
+					$box.animate({
+						'width': '140px',
+						'height': '160px',
+						'marginTop': '150px'
+					}, delta);
+				}
+			});
+		});
+	});
+}
 
 $(document).ready(function() {
 	$('#mainnav li:not(.selected)').mainNavFade();
@@ -308,4 +338,5 @@ $(document).ready(function() {
 		imageBtnNext: '/img/lb/next.gif'
 		
 	});
+	$('#bio-container').setupExpandableBoxes();
 });

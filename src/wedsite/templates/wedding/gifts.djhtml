@@ -19,13 +19,13 @@
 			<p>{% blocktrans with "/wedding/honeymoon/" as url_honeymoon %}gifts_honeymoon_start with {{url_honeymoon}}{% endblocktrans %}</p>
 			<dl class='c3 l1 r1'>
 				<dt>{% trans "Reason for payment" %}:</dt>
-				<dd>lista nozze Catania</dd>
+				<dd>lista nozze Catania-Brambilla</dd>
 				<dt>{% trans "Recipient" %}:</dt>
-				<dd>Bluvacanze Milano c.so Lodi</dd>
+				<dd>Gabriele Catania</dd>
 				<dt>{% trans "Bank subsidiary" %}:</dt>
-				<dd>Creditio artigiano, p.za San Fedele 4, Milano</dd>
+				<dd>IWBANK S.p.A., via Cavriana 20, Milano</dd>
 				<dt>{% trans "IBAN code" %}:</dt>
-				<dd>IT 06 S 03512 01601 000000011403</dd>
+				<dd>IT 21 F 03165 01600 000110458709</dd>
 			</dl>
 			<p>{% blocktrans with "http://www.bluvacanze.it/agenzie.asp" as url_bluvac_age %}gifts_honeymoon_end with {{url_bluvac_age}}{% endblocktrans %}</p>
 		</li>

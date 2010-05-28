@@ -21,6 +21,8 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 RewriteBase /
 RewriteRule ^robots\.txt$ - [L]
+RewriteRule ^googledb7562a44ddc3a19\.html$ - [L]
+
 
 RewriteRule ^media/(.*) django_admin_media/$1 [PT]
 RewriteRule ^(img|layout|js)/(.*)\.(.*)$ wedsite_static/$1/$2.$3
@@ -33,9 +35,9 @@ RewriteRule ^wedsite_static/maintenance.html$ - [L]
 #RewriteRule ^(.*)$ maintenance/ [R,NC,L]
 
 RewriteRule ^(dispatch_debug\.wsgi/.*)$ - [L]
+RewriteRule ^(dispatch\.wsgi/.*)$ - [L]
 
 #enable next line and comment out dispatch.wsgi lines for wsgi debug
 #RewriteRule ^(.*)$ dispatch_debug.wsgi/$1 [QSA,PT,L]
 
-RewriteRule ^(dispatch\.wsgi/.*)$ - [L]
 RewriteRule ^(.*)$ dispatch.wsgi/$1 [QSA,PT]

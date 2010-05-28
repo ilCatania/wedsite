@@ -228,7 +228,9 @@ ul.bullets {
  * grid layout
  */
 
-#content > div {
+#content > .c1, #content > .c2, #content > .c3,
+#content > .c4, #content > .c5, #content > .c6,
+#content > .c7, #content > .c8, #content > .c9 {
 	float: left;	
 }
 

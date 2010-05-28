@@ -1,3 +1,34 @@
+#bio-container {
+	height: 480px;
+	margin: 0 auto;
+}
+
+#bio-container.w2 {
+	width: 400px;	
+} 
+
+.bio {
+	width: 140px;
+	height: 160px;
+	overflow: hidden;
+	margin-top: 150px;
+	padding: 10px;
+	float:left;
+}
+
+.bio a.expand {
+	display:block;
+	width: 140px;
+	height: 160px;
+	margin: 0 10px 10px 0;
+	float: left;	
+}
+
+.bio .portrait {
+	width: 140px;
+	height: 160px;
+}
+
 dl {
 	font-size: 1.2em;
 	line-height: 1.6em;
@@ -96,7 +127,7 @@ div.center p, div.center h2 {
 	margin: 10px 0;
 }
 
-.pic.border img {
+.border img, img.border {
 	padding: 10px;
 	background: #006;
 }
